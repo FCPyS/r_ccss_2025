@@ -1,0 +1,26 @@
+project:
+  type: book
+  output-dir: docs
+
+book:
+  title: "Uso de R para la investigación social"
+  author: "Ana Escoto"
+  date: "08/19/2024"
+  site-url: https://fcpys.github.io/r_ccss_2025/
+  repo-url: https://github.com/fcpys/r_ccss_2025/
+  repo-branch: main
+  repo-actions: [edit, issue]  
+  chapters:
+    - index.qmd
+    - instala.qmd
+    - P1.qmd
+
+
+format:
+  html:
+    theme:
+      light: cosmo
+      dark: darkly
+
+editor: visual
+

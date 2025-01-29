@@ -1,0 +1,82 @@
+##Uso de R para la investigación social {.unnumbered}
+
+### Datos utilizados
+
+Lo puedes descargar de [acá](https://www.dropbox.com/scl/fo/oh2c2kxfvcvfajor94cc3/AN62zPRBEUgM86Zo_rwmhKU?rlkey=sxr2y1lqeslvibt5m5fz8w0x5&dl=0)
+
+## Facilitadora {.unnumbered}
+
+### Ana Ruth Escoto Castillo
+
+Profesora de tiempo completo en la Facultad de Ciencias Políticas y Sociales, UNAM. Doctora en Estudios de Población por El Colegio de México, cuenta con el nivel I en el Sistema Nacional de Investigadores. Coorganizadora del capítulo de la CDMX de la iniciativa global Rladies. Le interesa el bienestar de la población, en el presente, analizando los procesos de desigualdad y exclusión en los mercados laborales latinoamericanos; y, en el futuro, a través del estudio de la sustentabilidad. Su experiencia en el ámbito académico se ha concentrado en el estudio de este bienestar, específicamente en el análisis sociodemográfico de las condiciones laborales y la vinculación del comercio exterior con el mercado de trabajo, en la relación del cambio climático y la distribución de ingresos, el consumo energético de los hogares y sus implicaciones ambientales. Posee experiencia en recolección de información estadística, diseño y control de procesos de recolección y su procesamiento. Ha aplicado diversos métodos y herramientas multivariadas, homologación de información y comparabilidad de fuentes en sus investigaciones, así como usa de diversos softwares estadísticos, y ha impartido clases de estadítica aplicada a nivel de licenciatura y posgrado.
+
+## Contenido
+
+Objetivo General Que el estudiantado sea capaz de estudiar fenómenos sociales y aplicar conceptos estadísticos utilizando el paquete R a fuentes de información mexicanas y mundiales.
+
+Objetivos por unidad:
+
+### 1. Introducción a R y Rstudio (4 horas)
+
+> Objetivo: que el estudiantado sea familiarice con la interfase de trabajo y la programación por objetos, del mismo modo que sean capaces de realizar tareas básicas tales como crear un script, un proyecto, objetos, ambientes e instalar paqueterías.
+
+### 2. Importación de información y primera revisión de fuentes estadísticas (8 horas)
+
+a.  Importación de información a R en diferentes formatos
+
+b.  Importación de información de INEGI
+
+c.  Revisión de encuestas y ejemplos de importación de datos de acuerdo al tema de cada estudiante
+
+> Objetivo: que el estudiantado sea capaz de importar información desde diferentes formatos (.txt, .csv, .xlsx, .dta, .dbf) a R, así como de exportar sus resultados en estos formatos. Del mismo modo que sean capaces de revisar de manera preliminar los objetos de tipo `data.frame`: funciones `dplyr::glimpse()`, `skimr::skim()`, manejo de etiquetas y hacer subconjuntos de información.
+
+### 3. Revisión de elementos estadísticos básicos desde “tidyverse” (12 horas)
+
+a.  Tabulados con `janitor::tabyl()` y uso de factores de expansión con `pollster::topline()`, `pollster::crosstab`. Lectura e interpretación de tablas de doble entrada
+
+b.  Estadística descriptiva básica (medidas de tendencia central, dispersión y de posición) con el paquete `{dplyr}`
+
+c.  Gráficos univariados y bivariados usando `{ggplot2}` y extensiones de ggplot
+
+> Objetivo: que el estudiantado sea capaz de realizar análisis estadísticos básicos utilizando las bases de datos más afines a sus temas de investigación.
+
+### 4. Inferencia con R (12 horas)
+
+a.  Estimaciones por intervalo y diseño complejo muestral
+
+b.  Pruebas de Hipótesis
+
+c.  De una media y una proporción
+
+<!-- -->
+
+ii. De dos medias y dos proporciones
+iii. Prueba chi-cuadrado
+iv. Prueba ANOVA
+
+> Objetivo: que el estudiantado sea capaz de realizar inferencia estadística de las variables de interés utilizando las bases de datos más afines a sus temas de investigación.
+
+### 5. Modelos estadísticos con R (16 horas)
+
+a.  Modelos de regresión lineal
+b.  Introducción a otros modelos generalizados
+c.  Modelo logit
+
+<!-- -->
+
+ii. Modelo multilogit
+
+> Objetivo: que el estudiantado sea capaz de modelar variables dependientes contínuas y cualitativas, así como evaluar los modelos estadísticos de acuerdo a sus supuestos con R.
+
+### 6. Introducción al análisis de texto (8 horas)
+
+a.  Importación de corpus desde .txt, pdf, epub, pdf
+b.  Limpieza básica de cadenass
+c.  Tokenización, nubes y frecuencia de palabras
+d.  Asociación entre palabras y modelos
+
+> Objetivo: que el estudiantado sea capaz de manejar corpus de textos, tokenizar y dar estadísticas de palabras así como su asociación, utilizando los paquetes `{tidytext}` y `{udpipe}`.
+
+### 7. R para comunicar resultados con Quarto (4 horas)
+
+> Objetivo: que el estudiantado sea capaz de comprender los elementos básicos para crear documentos desde R utilizando Quarto
