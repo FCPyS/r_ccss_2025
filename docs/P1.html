@@ -64,6 +64,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
+<link href="./P2.html" rel="next">
 <link href="./instala.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -156,6 +157,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
  <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Primer acercamiento al uso del programa</span></span></a>
   </div>
 </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./P2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Importación de conjuntos de datos</span></span></a>
+  </div>
+</li>
     </ul>
     </div>
 </nav>
@@ -180,7 +187,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#instalación-de-paquetes" id="toc-instalación-de-paquetes" class="nav-link" data-scroll-target="#instalación-de-paquetes"><span class="header-section-number">1.12</span> Instalación de paquetes</a></li>
   <li><a href="#paquete-pacman" id="toc-paquete-pacman" class="nav-link" data-scroll-target="#paquete-pacman"><span class="header-section-number">1.13</span> Paquete <code>{pacman}</code></a></li>
   <li><a href="#estilos" id="toc-estilos" class="nav-link" data-scroll-target="#estilos"><span class="header-section-number">1.14</span> Estilos</a></li>
-  <li><a href="#ejercicio-1" id="toc-ejercicio-1" class="nav-link" data-scroll-target="#ejercicio-1"><span class="header-section-number">1.15</span> Ejercicio 1</a></li>
   </ul>
 <div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/fcpys/r_ccss_2025/edit/main/P1.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/fcpys/r_ccss_2025/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
     </div>
@@ -595,8 +601,8 @@ sum&gt; sum(1:5, NA, na.rm = TRUE)
 <div class="sourceCode cell-code" id="cb90"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb90-1"><a href="#cb90-1" aria-hidden="true" tabindex="-1"></a><span class="fu">gc</span>()           <span class="co"># Garbage collection, reporta memoria en uso</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>          used (Mb) gc trigger (Mb) limit (Mb) max used (Mb)
-Ncells  642209 34.3    1353741 72.3         NA  1353741 72.3
-Vcells 1204861  9.2    8388608 64.0      16384  2168263 16.6</code></pre>
+Ncells  642193 34.3    1353904 72.4         NA  1353904 72.4
+Vcells 1204314  9.2    8388608 64.0      16384  2167367 16.6</code></pre>
 </div>
 </div>
 <p>Para borrar todos nuestros objetos, usamos el siguiente comando, que equivale a usar la escobita de la venta de environment</p>
@@ -617,10 +623,10 @@ Vcells 1204861  9.2    8388608 64.0      16384  2168263 16.6</code></pre>
 <span id="cb95-2"><a href="#cb95-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb95-3"><a href="#cb95-3" aria-hidden="true" tabindex="-1"></a><span class="fu">list.files</span>()      <span class="co"># Lista de archivos en ese directorio</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code> [1] "P1.qmd"            "P1.rmarkdown"      "_quarto.yml"      
- [4] "datos"             "docs"              "index.html"       
- [7] "index.qmd"         "instala.html"      "instala.qmd"      
-[10] "r_ccss_2025.Rproj" "site_libs"        </code></pre>
+<pre><code> [1] "P1.qmd"            "P1.rmarkdown"      "P2.qmd"           
+ [4] "_quarto.yml"       "datos"             "docs"             
+ [7] "index.html"        "index.qmd"         "instala.html"     
+[10] "instala.qmd"       "r_ccss_2025.Rproj" "site_libs"        </code></pre>
 </div>
 </div>
 <p>Checar que esto también se puede hacer desde el menú:</p>
@@ -680,22 +686,6 @@ Vcells 1204861  9.2    8388608 64.0      16384  2168263 16.6</code></pre>
 <h2 data-number="1.14" class="anchored" data-anchor-id="estilos"><span class="header-section-number">1.14</span> Estilos</h2>
 <p>Escribir código tiene su gramática. Por lo general en este curso seguiremos el estilo de Google</p>
 <p><a href="https://google.github.io/styleguide/Rguide.html" class="uri">https://google.github.io/styleguide/Rguide.html</a></p>
-</section>
-<section id="ejercicio-1" class="level2" data-number="1.15">
-<h2 data-number="1.15" class="anchored" data-anchor-id="ejercicio-1"><span class="header-section-number">1.15</span> Ejercicio 1</h2>
-<p>Realice en un <strong>nuevo script</strong> lo siguiente:</p>
-<ol type="1">
-<li><p>Escriba un vector “x”, con los elementos 2,3,7,9. Muestre el resultado</p></li>
-<li><p>Escriba un vector “y”, con los elementos 9, 7, 3, 2. Muestre el resultado</p></li>
-<li><p>Escriba un vector “year” con los años que van desde 1990 a 1993. Muestre el resultado</p></li>
-<li><p>Escriba un vector “name” con los nombres de 4 de sus compañeros de curso. Muestre el resultado</p></li>
-<li><p>Cree una matrix “m” 2x4 que incluya los valores 101 a 108, que se ordene según fila</p></li>
-<li><p>¿Cuáles son las dimensiones de la matriz “m”?</p></li>
-<li><p>Cree una matriz “m2” juntado los vectores “x” y “y”, por sus filas ¿Cuáles son las dimensiones de la matriz “m2”?</p></li>
-<li><p>Convierta esa matriz en un <em>data.frame</em></p></li>
-<li><p>Escriba una lista</p></li>
-</ol>
-<p>Entregue su resultado en <a href="https://forms.gle/wX4dNyyiitVisSsB6">este formulario</a></p>
 
 
 </section>
@@ -1056,6 +1046,9 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </a>          
   </div>
   <div class="nav-page nav-page-next">
+      <a href="./P2.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Importación de conjuntos de datos</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
   </div>
 </nav>
 </div> <!-- /content -->
