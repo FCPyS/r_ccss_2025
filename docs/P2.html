@@ -173,21 +173,20 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
    
   <ul>
   <li><a href="#consejo-para-escribir-código" id="toc-consejo-para-escribir-código" class="nav-link active" data-scroll-target="#consejo-para-escribir-código"><span class="header-section-number">2.1</span> Consejo para escribir “código””</a></li>
-  <li><a href="#vamos-a-trabajar-con-el-proyecto" id="toc-vamos-a-trabajar-con-el-proyecto" class="nav-link" data-scroll-target="#vamos-a-trabajar-con-el-proyecto"><span class="header-section-number">2.2</span> Vamos a trabajar con el proyecto</a></li>
-  <li><a href="#importación-de-datos" id="toc-importación-de-datos" class="nav-link" data-scroll-target="#importación-de-datos"><span class="header-section-number">2.3</span> Importación de datos</a>
+  <li><a href="#importación-de-datos" id="toc-importación-de-datos" class="nav-link" data-scroll-target="#importación-de-datos"><span class="header-section-number">2.2</span> Importación de datos</a>
   <ul class="collapse">
-  <li><a href="#desde-excel" id="toc-desde-excel" class="nav-link" data-scroll-target="#desde-excel"><span class="header-section-number">2.3.1</span> Desde Excel</a></li>
-  <li><a href="#desde-stata-y-spss" id="toc-desde-stata-y-spss" class="nav-link" data-scroll-target="#desde-stata-y-spss"><span class="header-section-number">2.3.2</span> Desde STATA y SPSS</a></li>
+  <li><a href="#desde-excel" id="toc-desde-excel" class="nav-link" data-scroll-target="#desde-excel"><span class="header-section-number">2.2.1</span> Desde Excel</a></li>
+  <li><a href="#desde-stata-y-spss" id="toc-desde-stata-y-spss" class="nav-link" data-scroll-target="#desde-stata-y-spss"><span class="header-section-number">2.2.2</span> Desde STATA y SPSS</a></li>
   </ul></li>
-  <li><a href="#desde-.dbf" id="toc-desde-.dbf" class="nav-link" data-scroll-target="#desde-.dbf"><span class="header-section-number">2.4</span> Desde <code>.dbf</code></a></li>
-  <li><a href="#revisión-de-nuestro-data.frame" id="toc-revisión-de-nuestro-data.frame" class="nav-link" data-scroll-target="#revisión-de-nuestro-data.frame"><span class="header-section-number">2.5</span> Revisión de nuestro data.frame</a></li>
-  <li><a href="#revisión-con-dplyr" id="toc-revisión-con-dplyr" class="nav-link" data-scroll-target="#revisión-con-dplyr"><span class="header-section-number">2.6</span> Revisión con dplyr</a>
+  <li><a href="#desde-.dbf" id="toc-desde-.dbf" class="nav-link" data-scroll-target="#desde-.dbf"><span class="header-section-number">2.3</span> Desde <code>.dbf</code></a></li>
+  <li><a href="#revisión-de-nuestro-data.frame" id="toc-revisión-de-nuestro-data.frame" class="nav-link" data-scroll-target="#revisión-de-nuestro-data.frame"><span class="header-section-number">2.4</span> Revisión de nuestro data.frame</a></li>
+  <li><a href="#revisión-con-dplyr" id="toc-revisión-con-dplyr" class="nav-link" data-scroll-target="#revisión-con-dplyr"><span class="header-section-number">2.5</span> Revisión con dplyr</a>
   <ul class="collapse">
-  <li><a href="#ojeando" id="toc-ojeando" class="nav-link" data-scroll-target="#ojeando"><span class="header-section-number">2.6.1</span> Ojeando</a></li>
-  <li><a href="#revisión-con-skimr" id="toc-revisión-con-skimr" class="nav-link" data-scroll-target="#revisión-con-skimr"><span class="header-section-number">2.6.2</span> Revisión con <code>{skimr}</code></a></li>
-  <li><a href="#selección-de-casos-y-de-variables" id="toc-selección-de-casos-y-de-variables" class="nav-link" data-scroll-target="#selección-de-casos-y-de-variables"><span class="header-section-number">2.6.3</span> Selección de casos y de variables</a></li>
+  <li><a href="#ojeando" id="toc-ojeando" class="nav-link" data-scroll-target="#ojeando"><span class="header-section-number">2.5.1</span> Ojeando</a></li>
+  <li><a href="#revisión-con-skimr" id="toc-revisión-con-skimr" class="nav-link" data-scroll-target="#revisión-con-skimr"><span class="header-section-number">2.5.2</span> Revisión con <code>{skimr}</code></a></li>
+  <li><a href="#selección-de-casos-y-de-variables" id="toc-selección-de-casos-y-de-variables" class="nav-link" data-scroll-target="#selección-de-casos-y-de-variables"><span class="header-section-number">2.5.3</span> Selección de casos y de variables</a></li>
   </ul></li>
-  <li><a href="#subsetting" id="toc-subsetting" class="nav-link" data-scroll-target="#subsetting"><span class="header-section-number">2.7</span> “Subsetting”</a></li>
+  <li><a href="#subsetting" id="toc-subsetting" class="nav-link" data-scroll-target="#subsetting"><span class="header-section-number">2.6</span> “Subsetting”</a></li>
   </ul>
 <div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/fcpys/r_ccss_2025/edit/main/P2.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/fcpys/r_ccss_2025/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
     </div>
@@ -221,21 +220,17 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <pre><code>Cargando paquete requerido: pacman</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>pacman<span class="sc">::</span><span class="fu">p_load</span>(tidyverse, </span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>               readxl,writexl,googlesheets4, <span class="co"># importar hojas de cálculo</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>               readxl,writexl, <span class="co"># importar hojas de cálculo</span></span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>               haven, foreign, <span class="co"># importación de dta y sab</span></span>
 <span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>               sjlabelled, <span class="co"># etiquetas</span></span>
 <span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>               janitor, skimr, <span class="co">#carga los paquetes necesarios para esta práctica</span></span>
 <span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>               curl) <span class="co"># para que lea urls </span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
-<section id="vamos-a-trabajar-con-el-proyecto" class="level2" data-number="2.2">
-<h2 data-number="2.2" class="anchored" data-anchor-id="vamos-a-trabajar-con-el-proyecto"><span class="header-section-number">2.2</span> Vamos a trabajar con el proyecto</h2>
-<p>Descarguemos algunos ejemplos de información, <a href="https://www.dropbox.com/scl/fo/723ejf136k3u1eu61ndot/ALHu8XydO4r8OP2UawGlx0Y?rlkey=ao0k3y1fy8sfrvga2no5666hk&amp;dl=0">aquí</a> un par de ejemplo de algunos formatos.</p>
-</section>
-<section id="importación-de-datos" class="level2" data-number="2.3">
-<h2 data-number="2.3" class="anchored" data-anchor-id="importación-de-datos"><span class="header-section-number">2.3</span> Importación de datos</h2>
-<section id="desde-excel" class="level3" data-number="2.3.1">
-<h3 data-number="2.3.1" class="anchored" data-anchor-id="desde-excel"><span class="header-section-number">2.3.1</span> Desde Excel</h3>
+<section id="importación-de-datos" class="level2" data-number="2.2">
+<h2 data-number="2.2" class="anchored" data-anchor-id="importación-de-datos"><span class="header-section-number">2.2</span> Importación de datos</h2>
+<section id="desde-excel" class="level3" data-number="2.2.1">
+<h3 data-number="2.2.1" class="anchored" data-anchor-id="desde-excel"><span class="header-section-number">2.2.1</span> Desde Excel</h3>
 <p>El paquete más compatible con RStudio es readxl. A veces, otros paquetes tienen más problemas de configuración entre R y el Java.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>ejemploxl <span class="ot">&lt;-</span> readxl<span class="sc">::</span><span class="fu">read_excel</span>(<span class="st">"datos/ejemplo_xlsx.xlsx"</span>, <span class="at">sheet =</span> <span class="st">"para_importar"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -264,8 +259,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>writexl<span class="sc">::</span><span class="fu">write_xlsx</span>(ejemploxl, <span class="at">path =</span> <span class="st">"Mi_Exportación.xlsx"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
-<section id="desde-stata-y-spss" class="level3" data-number="2.3.2">
-<h3 data-number="2.3.2" class="anchored" data-anchor-id="desde-stata-y-spss"><span class="header-section-number">2.3.2</span> Desde STATA y SPSS</h3>
+<section id="desde-stata-y-spss" class="level3" data-number="2.2.2">
+<h3 data-number="2.2.2" class="anchored" data-anchor-id="desde-stata-y-spss"><span class="header-section-number">2.2.2</span> Desde STATA y SPSS</h3>
 <p>Si bien también se puede realizar desde el paquete <code>{foreign}</code>. Pero este no importa algunas características como las etiquetas y tampoco funciona con las versiones más nuevas de STATA. Vamos a instalar otro paquete, compatible con el mundo tidyverse.</p>
 <p>Recuerda que no hay que instalarlo (viene adentro de tidyverse).</p>
 <div class="cell">
@@ -287,16 +282,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Checa que en todas las exportaciones en los nombres hay que incluir la extensión del programa. Si quieres guardar en un lugar diferente al directorio del trabajo, hay que escribir toda la ruta dentro de la computadora.</p>
 </section>
 </section>
-<section id="desde-.dbf" class="level2" data-number="2.4">
-<h2 data-number="2.4" class="anchored" data-anchor-id="desde-.dbf"><span class="header-section-number">2.4</span> Desde <code>.dbf</code></h2>
+<section id="desde-.dbf" class="level2" data-number="2.3">
+<h2 data-number="2.3" class="anchored" data-anchor-id="desde-.dbf"><span class="header-section-number">2.3</span> Desde <code>.dbf</code></h2>
 <p><code>{foreing}</code> nos permite leer archivos en formato de <em>dBase</em>, con extensión “.dbf”. Si bien no es un formato muy común para los investigadores, sí para los que generan la información, puesto que dBase es uno de los principales programas de administración de bases de datos.</p>
 <p>He puesto un ejemplo de una base de datos mexicana en dbf, en este formato.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>ejemplo_dbf<span class="ot">&lt;-</span>foreign<span class="sc">::</span><span class="fu">read.dbf</span>(<span class="st">"datos/ejemplo_dbf.DBF"</span>) <span class="co">#checa cómo nos vamos adentro de nuestro directorio</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
-<section id="revisión-de-nuestro-data.frame" class="level2" data-number="2.5">
-<h2 data-number="2.5" class="anchored" data-anchor-id="revisión-de-nuestro-data.frame"><span class="header-section-number">2.5</span> Revisión de nuestro data.frame</h2>
+<section id="revisión-de-nuestro-data.frame" class="level2" data-number="2.4">
+<h2 data-number="2.4" class="anchored" data-anchor-id="revisión-de-nuestro-data.frame"><span class="header-section-number">2.4</span> Revisión de nuestro data.frame</h2>
 <p>Vamos a revisar la data.frame,</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">class</span>(concentradohogar) <span class="co"># tipo de objeto</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -359,8 +354,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </section>
-<section id="revisión-con-dplyr" class="level2" data-number="2.6">
-<h2 data-number="2.6" class="anchored" data-anchor-id="revisión-con-dplyr"><span class="header-section-number">2.6</span> Revisión con dplyr</h2>
+<section id="revisión-con-dplyr" class="level2" data-number="2.5">
+<h2 data-number="2.5" class="anchored" data-anchor-id="revisión-con-dplyr"><span class="header-section-number">2.5</span> Revisión con dplyr</h2>
 <p>Operador de “pipe” o “tubería” %&gt;% (Ctrl+Shift+M) Antes de continuar, presentemos el operador “pipe” %&gt;%. dplyr importa este operador de otro paquete (magrittr). Este operador le permite canalizar la salida de una función a la entrada de otra función. En lugar de funciones de anidamiento (lectura desde adentro hacia afuera), la idea de la tubería es leer las funciones de izquierda a derecha.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>concentradohogar <span class="sc">%&gt;%</span> </span>
@@ -389,8 +384,8 @@ $ sexo_jefe &lt;chr&gt; "2", "1", "1", "1", "1", "1", "2", "2", "2", "1", "1", "
 $ edad_jefe &lt;dbl&gt; 91, 68, 56, 87, 27, 57, 47, 75, 70, 69, 48, 73, 64, 55, 58, …</code></pre>
 </div>
 </div>
-<section id="ojeando" class="level3" data-number="2.6.1">
-<h3 data-number="2.6.1" class="anchored" data-anchor-id="ojeando"><span class="header-section-number">2.6.1</span> Ojeando</h3>
+<section id="ojeando" class="level3" data-number="2.5.1">
+<h3 data-number="2.5.1" class="anchored" data-anchor-id="ojeando"><span class="header-section-number">2.5.1</span> Ojeando</h3>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb24"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>dplyr<span class="sc">::</span><span class="fu">glimpse</span>(concentradohogar)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -602,8 +597,8 @@ NULL</code></pre>
 </div>
 </div>
 </section>
-<section id="revisión-con-skimr" class="level3" data-number="2.6.2">
-<h3 data-number="2.6.2" class="anchored" data-anchor-id="revisión-con-skimr"><span class="header-section-number">2.6.2</span> Revisión con <code>{skimr}</code></h3>
+<section id="revisión-con-skimr" class="level3" data-number="2.5.2">
+<h3 data-number="2.5.2" class="anchored" data-anchor-id="revisión-con-skimr"><span class="header-section-number">2.5.2</span> Revisión con <code>{skimr}</code></h3>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb34"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a>skimr<span class="sc">::</span><span class="fu">skim</span>(concentradohogar)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
@@ -2319,8 +2314,8 @@ NULL</code></pre>
 </div>
 </div>
 </section>
-<section id="selección-de-casos-y-de-variables" class="level3" data-number="2.6.3">
-<h3 data-number="2.6.3" class="anchored" data-anchor-id="selección-de-casos-y-de-variables"><span class="header-section-number">2.6.3</span> Selección de casos y de variables</h3>
+<section id="selección-de-casos-y-de-variables" class="level3" data-number="2.5.3">
+<h3 data-number="2.5.3" class="anchored" data-anchor-id="selección-de-casos-y-de-variables"><span class="header-section-number">2.5.3</span> Selección de casos y de variables</h3>
 <p>Poco a poco vamos comprendiendo más la lógica de R. Hay varias “formas” de programar. Por lo que no te asustes si varios códigos llegan al mismo resultado</p>
 <p>Para revisar el contenido de un data frame podemos usar, como lo hicimos anteriormente, el formato dataframe$var o usar corchete, checa como estas cuatro formas tan el mismo resultado.</p>
 <div class="cell">
@@ -2336,8 +2331,8 @@ NULL</code></pre>
 </div>
 </section>
 </section>
-<section id="subsetting" class="level2" data-number="2.7">
-<h2 data-number="2.7" class="anchored" data-anchor-id="subsetting"><span class="header-section-number">2.7</span> “Subsetting”</h2>
+<section id="subsetting" class="level2" data-number="2.6">
+<h2 data-number="2.6" class="anchored" data-anchor-id="subsetting"><span class="header-section-number">2.6</span> “Subsetting”</h2>
 <p>Selección “inversa” O sea no “botar algo”, es con el negativo. No funciona con todos los formatos</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb37"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a>x<span class="ot">&lt;-</span>concentradohogar <span class="sc">%&gt;%</span> </span>

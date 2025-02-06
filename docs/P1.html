@@ -601,8 +601,8 @@ sum&gt; sum(1:5, NA, na.rm = TRUE)
 <div class="sourceCode cell-code" id="cb90"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb90-1"><a href="#cb90-1" aria-hidden="true" tabindex="-1"></a><span class="fu">gc</span>()           <span class="co"># Garbage collection, reporta memoria en uso</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>          used (Mb) gc trigger (Mb) limit (Mb) max used (Mb)
-Ncells  642193 34.3    1353904 72.4         NA  1353904 72.4
-Vcells 1204314  9.2    8388608 64.0      16384  2167367 16.6</code></pre>
+Ncells  642193 34.3    1353852 72.4         NA  1353852 72.4
+Vcells 1204314  9.2    8388608 64.0      16384  2162959 16.6</code></pre>
 </div>
 </div>
 <p>Para borrar todos nuestros objetos, usamos el siguiente comando, que equivale a usar la escobita de la venta de environment</p>
@@ -623,10 +623,11 @@ Vcells 1204314  9.2    8388608 64.0      16384  2167367 16.6</code></pre>
 <span id="cb95-2"><a href="#cb95-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb95-3"><a href="#cb95-3" aria-hidden="true" tabindex="-1"></a><span class="fu">list.files</span>()      <span class="co"># Lista de archivos en ese directorio</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code> [1] "P1.qmd"            "P1.rmarkdown"      "P2.qmd"           
- [4] "_quarto.yml"       "datos"             "docs"             
- [7] "index.html"        "index.qmd"         "instala.html"     
-[10] "instala.qmd"       "r_ccss_2025.Rproj" "site_libs"        </code></pre>
+<pre><code> [1] "Mi_Exportación.xlsx" "P1.qmd"              "P1.rmarkdown"       
+ [4] "P2.qmd"              "_quarto.yml"         "datos"              
+ [7] "docs"                "index.html"          "index.qmd"          
+[10] "instala.html"        "instala.qmd"         "r_ccss_2025.Rproj"  
+[13] "site_libs"          </code></pre>
 </div>
 </div>
 <p>Checar que esto también se puede hacer desde el menú:</p>
