@@ -64,6 +64,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
+<link href="./P6.html" rel="next">
 <link href="./P4.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -180,6 +181,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
  <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Ponderación y otros</span></span></a>
   </div>
 </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./P6.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Análisis descriptivo II</span></span></a>
+  </div>
+</li>
     </ul>
     </div>
 </nav>
@@ -212,36 +219,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#agregados-como-nuevo-dataframe" id="toc-agregados-como-nuevo-dataframe" class="nav-link" data-scroll-target="#agregados-como-nuevo-dataframe"><span class="header-section-number">5.6.1</span> Agregados como nuevo dataframe</a></li>
   <li><a href="#agregados-dentro-del-mismo-dataframe" id="toc-agregados-dentro-del-mismo-dataframe" class="nav-link" data-scroll-target="#agregados-dentro-del-mismo-dataframe"><span class="header-section-number">5.6.2</span> Agregados dentro del mismo dataframe</a></li>
   </ul></li>
-  <li><a href="#at-muchas-operaciones-de-dplyr" id="toc-at-muchas-operaciones-de-dplyr" class="nav-link" data-scroll-target="#at-muchas-operaciones-de-dplyr"><span class="header-section-number">5.7</span> _at muchas operaciones de <code>{dplyr}</code></a>
+  <li><a href="#creación-de-quintiles" id="toc-creación-de-quintiles" class="nav-link" data-scroll-target="#creación-de-quintiles"><span class="header-section-number">5.7</span> Creación de quintiles</a>
   <ul class="collapse">
-  <li><a href="#dplyrmutate_at" id="toc-dplyrmutate_at" class="nav-link" data-scroll-target="#dplyrmutate_at"><span class="header-section-number">5.7.1</span> <code>dplyr::mutate_at()</code></a></li>
-  <li><a href="#dplyrrename_at" id="toc-dplyrrename_at" class="nav-link" data-scroll-target="#dplyrrename_at"><span class="header-section-number">5.7.2</span> <code>dplyr::rename_at()</code></a></li>
+  <li><a href="#is.na-y-sus-primos" id="toc-is.na-y-sus-primos" class="nav-link" data-scroll-target="#is.na-y-sus-primos"><span class="header-section-number">5.7.1</span> <code>is.na</code> y sus primos</a></li>
   </ul></li>
-  <li><a href="#descriptivos-para-variables-cuantitativas" id="toc-descriptivos-para-variables-cuantitativas" class="nav-link" data-scroll-target="#descriptivos-para-variables-cuantitativas"><span class="header-section-number">5.8</span> Descriptivos para variables cuantitativas</a>
+  <li><a href="#at-muchas-operaciones-de-dplyr" id="toc-at-muchas-operaciones-de-dplyr" class="nav-link" data-scroll-target="#at-muchas-operaciones-de-dplyr"><span class="header-section-number">5.8</span> _at muchas operaciones de <code>{dplyr}</code></a>
   <ul class="collapse">
-  <li><a href="#medidas-numéricas-básicas" id="toc-medidas-numéricas-básicas" class="nav-link" data-scroll-target="#medidas-numéricas-básicas"><span class="header-section-number">5.8.1</span> Medidas numéricas básicas</a></li>
+  <li><a href="#dplyrmutate_at" id="toc-dplyrmutate_at" class="nav-link" data-scroll-target="#dplyrmutate_at"><span class="header-section-number">5.8.1</span> <code>dplyr::mutate_at()</code></a></li>
+  <li><a href="#dplyrrename_at" id="toc-dplyrrename_at" class="nav-link" data-scroll-target="#dplyrrename_at"><span class="header-section-number">5.8.2</span> <code>dplyr::rename_at()</code></a></li>
   </ul></li>
-  <li><a href="#creación-de-quintiles" id="toc-creación-de-quintiles" class="nav-link" data-scroll-target="#creación-de-quintiles"><span class="header-section-number">5.9</span> Creación de quintiles</a></li>
-  <li><a href="#selecciones-y-filtros-avanzados-1" id="toc-selecciones-y-filtros-avanzados-1" class="nav-link" data-scroll-target="#selecciones-y-filtros-avanzados-1"><span class="header-section-number">5.10</span> Selecciones y filtros avanzados</a>
-  <ul class="collapse">
-  <li><a href="#selecciones-con-ayudadores-y-wildcards-1" id="toc-selecciones-con-ayudadores-y-wildcards-1" class="nav-link" data-scroll-target="#selecciones-con-ayudadores-y-wildcards-1"><span class="header-section-number">5.10.1</span> Selecciones con “ayudadores” y <em>Wildcards</em></a></li>
-  <li><a href="#filtros-con-in-y-operadores-de-negación-1" id="toc-filtros-con-in-y-operadores-de-negación-1" class="nav-link" data-scroll-target="#filtros-con-in-y-operadores-de-negación-1"><span class="header-section-number">5.10.2</span> Filtros con <code>%in%</code> y operadores de negación</a></li>
-  <li><a href="#is.na-y-sus-primos" id="toc-is.na-y-sus-primos" class="nav-link" data-scroll-target="#is.na-y-sus-primos"><span class="header-section-number">5.10.3</span> <code>is.na</code> y sus primos</a></li>
-  </ul></li>
-  <li><a href="#agregados-1" id="toc-agregados-1" class="nav-link" data-scroll-target="#agregados-1"><span class="header-section-number">5.11</span> Agregados</a>
-  <ul class="collapse">
-  <li><a href="#agregados-como-nuevo-dataframe-1" id="toc-agregados-como-nuevo-dataframe-1" class="nav-link" data-scroll-target="#agregados-como-nuevo-dataframe-1"><span class="header-section-number">5.11.1</span> Agregados como nuevo dataframe</a></li>
-  <li><a href="#agregados-dentro-del-mismo-dataframe-1" id="toc-agregados-dentro-del-mismo-dataframe-1" class="nav-link" data-scroll-target="#agregados-dentro-del-mismo-dataframe-1"><span class="header-section-number">5.11.2</span> Agregados dentro del mismo dataframe</a></li>
-  </ul></li>
-  <li><a href="#at-muchas-operaciones-de-dplyr-1" id="toc-at-muchas-operaciones-de-dplyr-1" class="nav-link" data-scroll-target="#at-muchas-operaciones-de-dplyr-1"><span class="header-section-number">5.12</span> _at muchas operaciones de <code>{dplyr}</code></a>
-  <ul class="collapse">
-  <li><a href="#dplyrmutate_at-1" id="toc-dplyrmutate_at-1" class="nav-link" data-scroll-target="#dplyrmutate_at-1"><span class="header-section-number">5.12.1</span> <code>dplyr::mutate_at()</code></a></li>
-  <li><a href="#dplyrrename_at-1" id="toc-dplyrrename_at-1" class="nav-link" data-scroll-target="#dplyrrename_at-1"><span class="header-section-number">5.12.2</span> <code>dplyr::rename_at()</code></a></li>
-  </ul></li>
-  <li><a href="#descriptivos-para-variables-cuantitativas-1" id="toc-descriptivos-para-variables-cuantitativas-1" class="nav-link" data-scroll-target="#descriptivos-para-variables-cuantitativas-1"><span class="header-section-number">5.13</span> Descriptivos para variables cuantitativas</a>
-  <ul class="collapse">
-  <li><a href="#medidas-numéricas-básicas-1" id="toc-medidas-numéricas-básicas-1" class="nav-link" data-scroll-target="#medidas-numéricas-básicas-1"><span class="header-section-number">5.13.1</span> Medidas numéricas básicas</a></li>
-  </ul></li>
+  <li><a href="#descriptivos-para-variables-cuantitativas" id="toc-descriptivos-para-variables-cuantitativas" class="nav-link" data-scroll-target="#descriptivos-para-variables-cuantitativas"><span class="header-section-number">5.9</span> Descriptivos para variables cuantitativas</a></li>
   </ul>
 <div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/fcpys/r_ccss_2025/edit/main/P5.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/fcpys/r_ccss_2025/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
     </div>
@@ -750,152 +737,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </section>
 </section>
-<section id="at-muchas-operaciones-de-dplyr" class="level2" data-number="5.7">
-<h2 data-number="5.7" class="anchored" data-anchor-id="at-muchas-operaciones-de-dplyr"><span class="header-section-number">5.7</span> _at muchas operaciones de <code>{dplyr}</code></h2>
-<p>Este es un sufijo que funciona en algunos verbos de <code>{dplyr}</code> y permite hacer una operación en varias variables al mismo tiempo, funciona con vars()</p>
-<section id="dplyrmutate_at" class="level3" data-number="5.7.1">
-<h3 data-number="5.7.1" class="anchored" data-anchor-id="dplyrmutate_at"><span class="header-section-number">5.7.1</span> <code>dplyr::mutate_at()</code></h3>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb54"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb54-1"><a href="#cb54-1" aria-hidden="true" tabindex="-1"></a>concentradohogar <span class="sc">%&gt;%</span> </span>
-<span id="cb54-2"><a href="#cb54-2" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">mutate_at</span>(<span class="fu">vars</span>(clase_hog, sexo_jefe), <span class="sc">~</span> <span class="fu">as_label</span>(.x)) <span class="sc">%&gt;%</span> <span class="co"># ojo con la coma y con el punto</span></span>
-<span id="cb54-3"><a href="#cb54-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tabyl</span>(clase_hog, sexo_jefe)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>    clase_hog Hombre Mujer
-  unipersonal   6519  5367
-      nuclear  41919 13621
-     ampliado  12898  8888
-    compuesto    372   211
- corresidente    197   110</code></pre>
-</div>
-</div>
-</section>
-<section id="dplyrrename_at" class="level3" data-number="5.7.2">
-<h3 data-number="5.7.2" class="anchored" data-anchor-id="dplyrrename_at"><span class="header-section-number">5.7.2</span> <code>dplyr::rename_at()</code></h3>
-<p>Primero revisemos la opción paste y paste0</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb56"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb56-1"><a href="#cb56-1" aria-hidden="true" tabindex="-1"></a><span class="fu">paste</span>(<span class="st">"a"</span>,<span class="st">"b"</span>, <span class="at">sep=</span><span class="st">"_"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] "a_b"</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb58"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb58-1"><a href="#cb58-1" aria-hidden="true" tabindex="-1"></a><span class="fu">paste</span>(<span class="st">"a"</span>,<span class="st">"b"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] "a b"</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb60"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb60-1"><a href="#cb60-1" aria-hidden="true" tabindex="-1"></a><span class="fu">paste0</span>(<span class="st">"a"</span>,<span class="st">"b"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] "ab"</code></pre>
-</div>
-</div>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb62"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb62-1"><a href="#cb62-1" aria-hidden="true" tabindex="-1"></a>concentradohogar <span class="sc">%&gt;%</span> </span>
-<span id="cb62-2"><a href="#cb62-2" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">rename_at</span>(<span class="fu">vars</span>(clase_hog, sexo_jefe), <span class="sc">~</span> <span class="fu">paste0</span>(.x, <span class="st">"_"</span>)) <span class="sc">%&gt;%</span> <span class="co"># sufijo</span></span>
-<span id="cb62-3"><a href="#cb62-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(clase_hog_, sexo_jefe_)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 90,102 × 2
-   clase_hog_ sexo_jefe_
-        &lt;dbl&gt;      &lt;dbl&gt;
- 1          3          2
- 2          2          1
- 3          2          1
- 4          3          1
- 5          1          1
- 6          2          1
- 7          2          2
- 8          1          2
- 9          2          2
-10          2          1
-# ℹ 90,092 more rows</code></pre>
-</div>
-</div>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb64"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb64-1"><a href="#cb64-1" aria-hidden="true" tabindex="-1"></a>concentradohogar <span class="sc">%&gt;%</span> </span>
-<span id="cb64-2"><a href="#cb64-2" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">rename_at</span>(<span class="fu">vars</span>(clase_hog, sexo_jefe), <span class="sc">~</span> <span class="fu">paste0</span>(<span class="st">"desc_"</span>, .x)) <span class="sc">%&gt;%</span> <span class="co"># prefijo</span></span>
-<span id="cb64-3"><a href="#cb64-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="fu">starts_with</span>(<span class="st">"desc"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 90,102 × 2
-   desc_clase_hog desc_sexo_jefe
-            &lt;dbl&gt;          &lt;dbl&gt;
- 1              3              2
- 2              2              1
- 3              2              1
- 4              3              1
- 5              1              1
- 6              2              1
- 7              2              2
- 8              1              2
- 9              2              2
-10              2              1
-# ℹ 90,092 more rows</code></pre>
-</div>
-</div>
-</section>
-</section>
-<section id="descriptivos-para-variables-cuantitativas" class="level2" data-number="5.8">
-<h2 data-number="5.8" class="anchored" data-anchor-id="descriptivos-para-variables-cuantitativas"><span class="header-section-number">5.8</span> Descriptivos para variables cuantitativas</h2>
-<p>Vamos a empezar a revisar los gráficos para variables cuantitativas.</p>
-<section id="medidas-numéricas-básicas" class="level3" data-number="5.8.1">
-<h3 data-number="5.8.1" class="anchored" data-anchor-id="medidas-numéricas-básicas"><span class="header-section-number">5.8.1</span> Medidas numéricas básicas</h3>
-<p>5 números</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb66"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb66-1"><a href="#cb66-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(concentradohogar<span class="sc">$</span>ing_cor) <span class="do">## ingresos</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
-      0   28386   46074   61490   74344 7153770 </code></pre>
-</div>
-</div>
-<p>Con pipes se pueden crear “indicadores” de nuestras variables es un tibble, tal como lo hicimos con el diseño complejo</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb68"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb68-1"><a href="#cb68-1" aria-hidden="true" tabindex="-1"></a>concentradohogar <span class="sc">%&gt;%</span> </span>
-<span id="cb68-2"><a href="#cb68-2" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">summarise</span>(<span class="at">nombre_indicador=</span><span class="fu">mean</span>(ing_cor, <span class="at">na.rm=</span>T)) <span class="co"># las funciones también pueden tener atributos</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 1 × 1
-  nombre_indicador
-             &lt;dbl&gt;
-1           61490.</code></pre>
-</div>
-</div>
-<p>Funciona con <code>group_by()</code> y con <code>.by()</code></p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb70"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb70-1"><a href="#cb70-1" aria-hidden="true" tabindex="-1"></a>concentradohogar <span class="sc">%&gt;%</span> </span>
-<span id="cb70-2"><a href="#cb70-2" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">summarise</span>(<span class="at">nombre_indicador=</span><span class="fu">mean</span>(ing_cor, <span class="at">na.rm=</span>T), <span class="at">.by=</span>ent) <span class="co"># las funciones también pueden tener atributos</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 32 × 2
-   ent   nombre_indicador
-   &lt;chr&gt;            &lt;dbl&gt;
- 1 01              73162.
- 2 02              80341.
- 3 03              87777.
- 4 04              57921.
- 5 05              69761.
- 6 06              63841.
- 7 07              40765.
- 8 08              73981.
- 9 09              77909.
-10 10              53608.
-# ℹ 22 more rows</code></pre>
-</div>
-</div>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb72"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb72-1"><a href="#cb72-1" aria-hidden="true" tabindex="-1"></a>concentradohogar <span class="sc">%&gt;%</span> </span>
-<span id="cb72-2"><a href="#cb72-2" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">summarise_at</span>(<span class="fu">vars</span>(<span class="fu">contains</span>(<span class="st">"ing"</span>)), <span class="sc">~</span> <span class="fu">mean</span>(.x)) <span class="co"># las funciones también pueden tener atributos</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 1 × 4
-  percep_ing ing_cor ingtrab otros_ing
-       &lt;dbl&gt;   &lt;dbl&gt;   &lt;dbl&gt;     &lt;dbl&gt;
-1       2.26  61490.  40360.      50.9</code></pre>
-</div>
-</div>
-</section>
-</section>
-<section id="creación-de-quintiles" class="level2" data-number="5.9">
-<h2 data-number="5.9" class="anchored" data-anchor-id="creación-de-quintiles"><span class="header-section-number">5.9</span> Creación de quintiles</h2>
+<section id="creación-de-quintiles" class="level2" data-number="5.7">
+<h2 data-number="5.7" class="anchored" data-anchor-id="creación-de-quintiles"><span class="header-section-number">5.7</span> Creación de quintiles</h2>
 <p>Otro tipo de variables de intervalos muy importante son los quintiles y otras medidas de posición.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb74"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb74-1"><a href="#cb74-1" aria-hidden="true" tabindex="-1"></a>concentradohogar <span class="sc">%&lt;&gt;%</span></span>
-<span id="cb74-2"><a href="#cb74-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">quintil0=</span><span class="fu">ntile</span>(ing_cor, <span class="at">n=</span><span class="dv">5</span>))</span>
-<span id="cb74-3"><a href="#cb74-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb74-4"><a href="#cb74-4" aria-hidden="true" tabindex="-1"></a>concentradohogar <span class="sc">%&gt;%</span> </span>
-<span id="cb74-5"><a href="#cb74-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tabyl</span>(quintil0)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb54"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb54-1"><a href="#cb54-1" aria-hidden="true" tabindex="-1"></a>concentradohogar <span class="sc">%&lt;&gt;%</span></span>
+<span id="cb54-2"><a href="#cb54-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">quintil0=</span><span class="fu">ntile</span>(ing_cor, <span class="at">n=</span><span class="dv">5</span>))</span>
+<span id="cb54-3"><a href="#cb54-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb54-4"><a href="#cb54-4" aria-hidden="true" tabindex="-1"></a>concentradohogar <span class="sc">%&gt;%</span> </span>
+<span id="cb54-5"><a href="#cb54-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tabyl</span>(quintil0)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code> quintil0     n   percent
         1 18021 0.2000067
@@ -907,13 +757,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <p>Pero quizás nos interesa más los quintiles que toman en cuenta el factor de expansión, por eso usamos el paquete <code>{dineq}</code></p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb76"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb76-1"><a href="#cb76-1" aria-hidden="true" tabindex="-1"></a>concentradohogar <span class="sc">%&lt;&gt;%</span></span>
-<span id="cb76-2"><a href="#cb76-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">quintil1=</span>dineq<span class="sc">::</span><span class="fu">ntiles.wtd</span>(ing_cor, <span class="co"># variable a utilizar</span></span>
-<span id="cb76-3"><a href="#cb76-3" aria-hidden="true" tabindex="-1"></a>                                    <span class="at">n=</span><span class="dv">5</span>, <span class="co"># número de grupos equitativos</span></span>
-<span id="cb76-4"><a href="#cb76-4" aria-hidden="true" tabindex="-1"></a>                                    <span class="at">weights=</span>factor)) <span class="co"># factor</span></span>
-<span id="cb76-5"><a href="#cb76-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb76-6"><a href="#cb76-6" aria-hidden="true" tabindex="-1"></a>concentradohogar <span class="sc">%&gt;%</span> </span>
-<span id="cb76-7"><a href="#cb76-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tabyl</span>(quintil1)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb56"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb56-1"><a href="#cb56-1" aria-hidden="true" tabindex="-1"></a>concentradohogar <span class="sc">%&lt;&gt;%</span></span>
+<span id="cb56-2"><a href="#cb56-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">quintil1=</span>dineq<span class="sc">::</span><span class="fu">ntiles.wtd</span>(ing_cor, <span class="co"># variable a utilizar</span></span>
+<span id="cb56-3"><a href="#cb56-3" aria-hidden="true" tabindex="-1"></a>                                    <span class="at">n=</span><span class="dv">5</span>, <span class="co"># número de grupos equitativos</span></span>
+<span id="cb56-4"><a href="#cb56-4" aria-hidden="true" tabindex="-1"></a>                                    <span class="at">weights=</span>factor)) <span class="co"># factor</span></span>
+<span id="cb56-5"><a href="#cb56-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb56-6"><a href="#cb56-6" aria-hidden="true" tabindex="-1"></a>concentradohogar <span class="sc">%&gt;%</span> </span>
+<span id="cb56-7"><a href="#cb56-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tabyl</span>(quintil1)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code> quintil1     n   percent
         1 19000 0.2108721
@@ -922,10 +772,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         4 17744 0.1969324
         5 17007 0.1887527</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb78"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb78-1"><a href="#cb78-1" aria-hidden="true" tabindex="-1"></a>concentradohogar <span class="sc">%&gt;%</span> </span>
-<span id="cb78-2"><a href="#cb78-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">count</span>(quintil1, <span class="at">wt=</span>factor) <span class="sc">%&gt;%</span> </span>
-<span id="cb78-3"><a href="#cb78-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">p=</span>n<span class="sc">/</span><span class="fu">sum</span>(n)<span class="sc">*</span><span class="dv">100</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb78-4"><a href="#cb78-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">adorn_totals</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb58"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb58-1"><a href="#cb58-1" aria-hidden="true" tabindex="-1"></a>concentradohogar <span class="sc">%&gt;%</span> </span>
+<span id="cb58-2"><a href="#cb58-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">count</span>(quintil1, <span class="at">wt=</span>factor) <span class="sc">%&gt;%</span> </span>
+<span id="cb58-3"><a href="#cb58-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">p=</span>n<span class="sc">/</span><span class="fu">sum</span>(n)<span class="sc">*</span><span class="dv">100</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb58-4"><a href="#cb58-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">adorn_totals</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code> quintil1        n         p
         1  7512196  20.00046
@@ -936,12 +786,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     Total 37560123 100.00000</code></pre>
 </div>
 </div>
-<p>Podemos también ver la diferencia en los máximos y minimos de ambas variables</p>
+<p>Podemos también ver la diferencia en los máximos y mínimos de ambas variables</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb80"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb80-1"><a href="#cb80-1" aria-hidden="true" tabindex="-1"></a>concentradohogar <span class="sc">%&gt;%</span> </span>
-<span id="cb80-2"><a href="#cb80-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(quintil0) <span class="sc">%&gt;%</span> </span>
-<span id="cb80-3"><a href="#cb80-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">min=</span><span class="fu">min</span>(ing_cor),</span>
-<span id="cb80-4"><a href="#cb80-4" aria-hidden="true" tabindex="-1"></a>            <span class="at">max=</span><span class="fu">max</span>(ing_cor))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb60"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb60-1"><a href="#cb60-1" aria-hidden="true" tabindex="-1"></a>concentradohogar <span class="sc">%&gt;%</span> </span>
+<span id="cb60-2"><a href="#cb60-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(quintil0) <span class="sc">%&gt;%</span> </span>
+<span id="cb60-3"><a href="#cb60-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">min=</span><span class="fu">min</span>(ing_cor),</span>
+<span id="cb60-4"><a href="#cb60-4" aria-hidden="true" tabindex="-1"></a>            <span class="at">max=</span><span class="fu">max</span>(ing_cor))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 5 × 3
   quintil0    min      max
@@ -955,10 +805,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <p>Veamos con la ponderación:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb82"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb82-1"><a href="#cb82-1" aria-hidden="true" tabindex="-1"></a>concentradohogar <span class="sc">%&gt;%</span> </span>
-<span id="cb82-2"><a href="#cb82-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(quintil1) <span class="sc">%&gt;%</span> </span>
-<span id="cb82-3"><a href="#cb82-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">min=</span><span class="fu">min</span>(ing_cor),</span>
-<span id="cb82-4"><a href="#cb82-4" aria-hidden="true" tabindex="-1"></a>            <span class="at">max=</span><span class="fu">max</span>(ing_cor))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb62"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb62-1"><a href="#cb62-1" aria-hidden="true" tabindex="-1"></a>concentradohogar <span class="sc">%&gt;%</span> </span>
+<span id="cb62-2"><a href="#cb62-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(quintil1) <span class="sc">%&gt;%</span> </span>
+<span id="cb62-3"><a href="#cb62-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">min=</span><span class="fu">min</span>(ing_cor),</span>
+<span id="cb62-4"><a href="#cb62-4" aria-hidden="true" tabindex="-1"></a>            <span class="at">max=</span><span class="fu">max</span>(ing_cor))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 5 × 3
   quintil1    min      max
@@ -973,9 +823,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>La flexibilidad de dplyr nos permite además hacer quintiles fácilmente adentro de grupos. Por ejemplo si quisiéramos hacer quintiles estatales… Claro para eso debemos tener la variable.</p>
 <p>La variable “ubica_geo”, nos da esa información pero junta</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb84"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb84-1"><a href="#cb84-1" aria-hidden="true" tabindex="-1"></a>concentradohogar <span class="sc">%&gt;%</span> </span>
-<span id="cb84-2"><a href="#cb84-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(ubica_geo) <span class="sc">%&gt;%</span> </span>
-<span id="cb84-3"><a href="#cb84-3" aria-hidden="true" tabindex="-1"></a>  head</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb64"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb64-1"><a href="#cb64-1" aria-hidden="true" tabindex="-1"></a>concentradohogar <span class="sc">%&gt;%</span> </span>
+<span id="cb64-2"><a href="#cb64-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(ubica_geo) <span class="sc">%&gt;%</span> </span>
+<span id="cb64-3"><a href="#cb64-3" aria-hidden="true" tabindex="-1"></a>  head</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 6 × 1
   ubica_geo
@@ -990,11 +840,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <p>Vamos a crear dos variables, uan que nos diga la entidad y la otra el municipio</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb86"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb86-1"><a href="#cb86-1" aria-hidden="true" tabindex="-1"></a>concentradohogar <span class="sc">%&lt;&gt;%</span></span>
-<span id="cb86-2"><a href="#cb86-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">ent=</span>stringr<span class="sc">::</span><span class="fu">str_sub</span>(ubica_geo, <span class="at">start =</span> <span class="dv">1</span>, <span class="at">end =</span> <span class="dv">2</span>)) <span class="sc">%&gt;%</span> </span>
-<span id="cb86-3"><a href="#cb86-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">mun=</span>stringr<span class="sc">::</span><span class="fu">str_sub</span>(ubica_geo, <span class="at">start =</span> <span class="dv">3</span>, <span class="at">end =</span> <span class="dv">5</span>))</span>
-<span id="cb86-4"><a href="#cb86-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb86-5"><a href="#cb86-5" aria-hidden="true" tabindex="-1"></a>concentradohogar <span class="sc">%&gt;%</span> <span class="fu">tabyl</span>(ent)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb66"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb66-1"><a href="#cb66-1" aria-hidden="true" tabindex="-1"></a>concentradohogar <span class="sc">%&lt;&gt;%</span></span>
+<span id="cb66-2"><a href="#cb66-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">ent=</span>stringr<span class="sc">::</span><span class="fu">str_sub</span>(ubica_geo, <span class="at">start =</span> <span class="dv">1</span>, <span class="at">end =</span> <span class="dv">2</span>)) <span class="sc">%&gt;%</span> </span>
+<span id="cb66-3"><a href="#cb66-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">mun=</span>stringr<span class="sc">::</span><span class="fu">str_sub</span>(ubica_geo, <span class="at">start =</span> <span class="dv">3</span>, <span class="at">end =</span> <span class="dv">5</span>))</span>
+<span id="cb66-4"><a href="#cb66-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb66-5"><a href="#cb66-5" aria-hidden="true" tabindex="-1"></a>concentradohogar <span class="sc">%&gt;%</span> <span class="fu">tabyl</span>(ent)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code> ent    n    percent
   01 2669 0.02962198
@@ -1030,7 +880,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   31 2947 0.03270738
   32 2522 0.02799050</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb88"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb88-1"><a href="#cb88-1" aria-hidden="true" tabindex="-1"></a>concentradohogar <span class="sc">%&gt;%</span> <span class="fu">tabyl</span>(mun)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb68"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb68-1"><a href="#cb68-1" aria-hidden="true" tabindex="-1"></a>concentradohogar <span class="sc">%&gt;%</span> <span class="fu">tabyl</span>(mun)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code> mun    n      percent
  001 5079 5.636945e-02
@@ -1276,16 +1126,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <p>Hoy sí podemos hacer nuestras variables dentro de cada entidad federativa</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb90"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb90-1"><a href="#cb90-1" aria-hidden="true" tabindex="-1"></a>concentradohogar <span class="sc">%&lt;&gt;%</span></span>
-<span id="cb90-2"><a href="#cb90-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(ent) <span class="sc">%&gt;%</span> </span>
-<span id="cb90-3"><a href="#cb90-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">quintil2=</span>dineq<span class="sc">::</span><span class="fu">ntiles.wtd</span>(ing_cor, <span class="at">n=</span><span class="dv">5</span>, <span class="at">weights=</span>factor)) <span class="sc">%&gt;%</span> </span>
-<span id="cb90-4"><a href="#cb90-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ungroup</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb70"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb70-1"><a href="#cb70-1" aria-hidden="true" tabindex="-1"></a>concentradohogar <span class="sc">%&lt;&gt;%</span></span>
+<span id="cb70-2"><a href="#cb70-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(ent) <span class="sc">%&gt;%</span> </span>
+<span id="cb70-3"><a href="#cb70-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">quintil2=</span>dineq<span class="sc">::</span><span class="fu">ntiles.wtd</span>(ing_cor, <span class="at">n=</span><span class="dv">5</span>, <span class="at">weights=</span>factor)) <span class="sc">%&gt;%</span> </span>
+<span id="cb70-4"><a href="#cb70-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ungroup</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>¿Discreparán muchos los hogares en sus distribuciones a nivel nacional y por entidad?</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb91"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb91-1"><a href="#cb91-1" aria-hidden="true" tabindex="-1"></a>concentradohogar <span class="sc">%&gt;%</span> </span>
-<span id="cb91-2"><a href="#cb91-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tabyl</span>(quintil1,quintil2) <span class="sc">%&gt;%</span> </span>
-<span id="cb91-3"><a href="#cb91-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">adorn_totals</span>(<span class="fu">c</span>(<span class="st">"row"</span>, <span class="st">"col"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb71"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb71-1"><a href="#cb71-1" aria-hidden="true" tabindex="-1"></a>concentradohogar <span class="sc">%&gt;%</span> </span>
+<span id="cb71-2"><a href="#cb71-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tabyl</span>(quintil1,quintil2) <span class="sc">%&gt;%</span> </span>
+<span id="cb71-3"><a href="#cb71-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">adorn_totals</span>(<span class="fu">c</span>(<span class="st">"row"</span>, <span class="st">"col"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code> quintil1     1     2     3     4     5 Total
         1 15746  3086   168     0     0 19000
@@ -1298,29 +1148,29 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <p>Y si queremos este tabulado más bonito</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb93"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb93-1"><a href="#cb93-1" aria-hidden="true" tabindex="-1"></a>concentradohogar <span class="sc">%&gt;%</span> </span>
-<span id="cb93-2"><a href="#cb93-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tabyl</span>(quintil1,quintil2) <span class="sc">%&gt;%</span> </span>
-<span id="cb93-3"><a href="#cb93-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">adorn_totals</span>(<span class="fu">c</span>(<span class="st">"row"</span>, <span class="st">"col"</span>)) <span class="sc">%&gt;%</span> </span>
-<span id="cb93-4"><a href="#cb93-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">gt</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb73"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb73-1"><a href="#cb73-1" aria-hidden="true" tabindex="-1"></a>concentradohogar <span class="sc">%&gt;%</span> </span>
+<span id="cb73-2"><a href="#cb73-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tabyl</span>(quintil1,quintil2) <span class="sc">%&gt;%</span> </span>
+<span id="cb73-3"><a href="#cb73-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">adorn_totals</span>(<span class="fu">c</span>(<span class="st">"row"</span>, <span class="st">"col"</span>)) <span class="sc">%&gt;%</span> </span>
+<span id="cb73-4"><a href="#cb73-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">gt</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 
-<div id="juilacgzoy" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#juilacgzoy table {
+<div id="celnkaefdr" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#celnkaefdr table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#juilacgzoy thead, #juilacgzoy tbody, #juilacgzoy tfoot, #juilacgzoy tr, #juilacgzoy td, #juilacgzoy th {
+#celnkaefdr thead, #celnkaefdr tbody, #celnkaefdr tfoot, #celnkaefdr tr, #celnkaefdr td, #celnkaefdr th {
   border-style: none;
 }
 
-#juilacgzoy p {
+#celnkaefdr p {
   margin: 0;
   padding: 0;
 }
 
-#juilacgzoy .gt_table {
+#celnkaefdr .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -1346,12 +1196,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-left-color: #D3D3D3;
 }
 
-#juilacgzoy .gt_caption {
+#celnkaefdr .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#juilacgzoy .gt_title {
+#celnkaefdr .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -1363,7 +1213,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-bottom-width: 0;
 }
 
-#juilacgzoy .gt_subtitle {
+#celnkaefdr .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -1375,7 +1225,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-top-width: 0;
 }
 
-#juilacgzoy .gt_heading {
+#celnkaefdr .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -1387,13 +1237,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-right-color: #D3D3D3;
 }
 
-#juilacgzoy .gt_bottom_border {
+#celnkaefdr .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#juilacgzoy .gt_col_headings {
+#celnkaefdr .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1408,7 +1258,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-right-color: #D3D3D3;
 }
 
-#juilacgzoy .gt_col_heading {
+#celnkaefdr .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1428,7 +1278,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   overflow-x: hidden;
 }
 
-#juilacgzoy .gt_column_spanner_outer {
+#celnkaefdr .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1440,15 +1290,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 4px;
 }
 
-#juilacgzoy .gt_column_spanner_outer:first-child {
+#celnkaefdr .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#juilacgzoy .gt_column_spanner_outer:last-child {
+#celnkaefdr .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#juilacgzoy .gt_column_spanner {
+#celnkaefdr .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -1460,11 +1310,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   width: 100%;
 }
 
-#juilacgzoy .gt_spanner_row {
+#celnkaefdr .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#juilacgzoy .gt_group_heading {
+#celnkaefdr .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1490,7 +1340,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   text-align: left;
 }
 
-#juilacgzoy .gt_empty_group_heading {
+#celnkaefdr .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -1505,15 +1355,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   vertical-align: middle;
 }
 
-#juilacgzoy .gt_from_md > :first-child {
+#celnkaefdr .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#juilacgzoy .gt_from_md > :last-child {
+#celnkaefdr .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#juilacgzoy .gt_row {
+#celnkaefdr .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1532,7 +1382,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   overflow-x: hidden;
 }
 
-#juilacgzoy .gt_stub {
+#celnkaefdr .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1545,7 +1395,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#juilacgzoy .gt_stub_row_group {
+#celnkaefdr .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1559,15 +1409,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   vertical-align: top;
 }
 
-#juilacgzoy .gt_row_group_first td {
+#celnkaefdr .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#juilacgzoy .gt_row_group_first th {
+#celnkaefdr .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#juilacgzoy .gt_summary_row {
+#celnkaefdr .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1577,16 +1427,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#juilacgzoy .gt_first_summary_row {
+#celnkaefdr .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#juilacgzoy .gt_first_summary_row.thick {
+#celnkaefdr .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#juilacgzoy .gt_last_summary_row {
+#celnkaefdr .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1596,7 +1446,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-bottom-color: #D3D3D3;
 }
 
-#juilacgzoy .gt_grand_summary_row {
+#celnkaefdr .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1606,7 +1456,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#juilacgzoy .gt_first_grand_summary_row {
+#celnkaefdr .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1616,7 +1466,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-top-color: #D3D3D3;
 }
 
-#juilacgzoy .gt_last_grand_summary_row_top {
+#celnkaefdr .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1626,11 +1476,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-bottom-color: #D3D3D3;
 }
 
-#juilacgzoy .gt_striped {
+#celnkaefdr .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#juilacgzoy .gt_table_body {
+#celnkaefdr .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1639,7 +1489,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-bottom-color: #D3D3D3;
 }
 
-#juilacgzoy .gt_footnotes {
+#celnkaefdr .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1653,7 +1503,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-right-color: #D3D3D3;
 }
 
-#juilacgzoy .gt_footnote {
+#celnkaefdr .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -1662,7 +1512,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#juilacgzoy .gt_sourcenotes {
+#celnkaefdr .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1676,7 +1526,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-right-color: #D3D3D3;
 }
 
-#juilacgzoy .gt_sourcenote {
+#celnkaefdr .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -1684,72 +1534,72 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#juilacgzoy .gt_left {
+#celnkaefdr .gt_left {
   text-align: left;
 }
 
-#juilacgzoy .gt_center {
+#celnkaefdr .gt_center {
   text-align: center;
 }
 
-#juilacgzoy .gt_right {
+#celnkaefdr .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#juilacgzoy .gt_font_normal {
+#celnkaefdr .gt_font_normal {
   font-weight: normal;
 }
 
-#juilacgzoy .gt_font_bold {
+#celnkaefdr .gt_font_bold {
   font-weight: bold;
 }
 
-#juilacgzoy .gt_font_italic {
+#celnkaefdr .gt_font_italic {
   font-style: italic;
 }
 
-#juilacgzoy .gt_super {
+#celnkaefdr .gt_super {
   font-size: 65%;
 }
 
-#juilacgzoy .gt_footnote_marks {
+#celnkaefdr .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#juilacgzoy .gt_asterisk {
+#celnkaefdr .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#juilacgzoy .gt_indent_1 {
+#celnkaefdr .gt_indent_1 {
   text-indent: 5px;
 }
 
-#juilacgzoy .gt_indent_2 {
+#celnkaefdr .gt_indent_2 {
   text-indent: 10px;
 }
 
-#juilacgzoy .gt_indent_3 {
+#celnkaefdr .gt_indent_3 {
   text-indent: 15px;
 }
 
-#juilacgzoy .gt_indent_4 {
+#celnkaefdr .gt_indent_4 {
   text-indent: 20px;
 }
 
-#juilacgzoy .gt_indent_5 {
+#celnkaefdr .gt_indent_5 {
   text-indent: 25px;
 }
 
-#juilacgzoy .katex-display {
+#celnkaefdr .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#juilacgzoy div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#celnkaefdr div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -1822,175 +1672,42 @@ gt() %&gt;%
 tab_header( title = md("Distribución de los hogares en **México**"),
             subtitle = md("Según quintiles y *quintiles*")) %&gt;%
 tab_footnote( footnote = paste(get_label(concentradohogar\$ing_cor)))</code></pre>
-</section>
-<section id="selecciones-y-filtros-avanzados-1" class="level2" data-number="5.10">
-<h2 data-number="5.10" class="anchored" data-anchor-id="selecciones-y-filtros-avanzados-1"><span class="header-section-number">5.10</span> Selecciones y filtros avanzados</h2>
-<p>En prácticas pasadas ya revisamos las selecciones y los filtros pero avanzaremos.</p>
-<section id="selecciones-con-ayudadores-y-wildcards-1" class="level3" data-number="5.10.1">
-<h3 data-number="5.10.1" class="anchored" data-anchor-id="selecciones-con-ayudadores-y-wildcards-1"><span class="header-section-number">5.10.1</span> Selecciones con “ayudadores” y <em>Wildcards</em></h3>
-<p>Tenemos a veces variables que inician o terminan igual porque son parte de una sección, podemos elegir las variables de esa forma:</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb95"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb95-1"><a href="#cb95-1" aria-hidden="true" tabindex="-1"></a>concentradohogar <span class="sc">%&gt;%</span> </span>
-<span id="cb95-2"><a href="#cb95-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="fu">starts_with</span>(<span class="st">"ing"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 90,102 × 2
-   ing_cor ingtrab
-     &lt;dbl&gt;   &lt;dbl&gt;
- 1  56124.  35707.
- 2 108049.  66766.
- 3 133853.  93082.
- 4 105054.      0 
- 5  24212.  22255.
- 6 121650.  40255.
- 7  60261.  33359.
- 8  95978.      0 
- 9 158399.  80951.
-10  61343.  31182.
-# ℹ 90,092 more rows</code></pre>
-</div>
-</div>
-<p>Que tenga la cadena en cualquier parte del nombre</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb97"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb97-1"><a href="#cb97-1" aria-hidden="true" tabindex="-1"></a>concentradohogar <span class="sc">%&gt;%</span> </span>
-<span id="cb97-2"><a href="#cb97-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="fu">matches</span>(<span class="st">"ing"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 90,102 × 4
-   percep_ing ing_cor ingtrab otros_ing
-        &lt;dbl&gt;   &lt;dbl&gt;   &lt;dbl&gt;     &lt;dbl&gt;
- 1          3  56124.  35707.         0
- 2          2 108049.  66766.         0
- 3          2 133853.  93082.         0
- 4          2 105054.      0          0
- 5          1  24212.  22255.         0
- 6          4 121650.  40255.         0
- 7          2  60261.  33359.         0
- 8          1  95978.      0          0
- 9          3 158399.  80951.         0
-10          2  61343.  31182.         0
-# ℹ 90,092 more rows</code></pre>
-</div>
-</div>
-<p>Que tenga la cadena en la parte final</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb99"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb99-1"><a href="#cb99-1" aria-hidden="true" tabindex="-1"></a>concentradohogar <span class="sc">%&gt;%</span> </span>
-<span id="cb99-2"><a href="#cb99-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="fu">matches</span>(<span class="st">"hog"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 90,102 × 4
-   foliohog clase_hog transf_hog ero_nm_hog
-   &lt;chr&gt;        &lt;dbl&gt;      &lt;dbl&gt;      &lt;dbl&gt;
- 1 1                3         0          0 
- 2 1                2      9000.         0 
- 3 1                2         0          0 
- 4 1                3         0          0 
- 5 2                1         0       3214.
- 6 1                2         0          0 
- 7 1                2         0          0 
- 8 1                1      2443.         0 
- 9 1                2         0          0 
-10 1                2      1286.         0 
-# ℹ 90,092 more rows</code></pre>
-</div>
-</div>
-</section>
-<section id="filtros-con-in-y-operadores-de-negación-1" class="level3" data-number="5.10.2">
-<h3 data-number="5.10.2" class="anchored" data-anchor-id="filtros-con-in-y-operadores-de-negación-1"><span class="header-section-number">5.10.2</span> Filtros con <code>%in%</code> y operadores de negación</h3>
-<p>Si queremos seleccionar varios elementos en un solo comando, podemos utilizar <code>%in%</code> seguido de un vector de las opciones a señalar.</p>
-<p>Supongamos que nos queremos quedar con los datos de dos entidades. Con esta excusa también aprenderemos a usar una función para extraer de las cadenas</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb101"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb101-1"><a href="#cb101-1" aria-hidden="true" tabindex="-1"></a>concentradohogar <span class="sc">%&lt;&gt;%</span> </span>
-<span id="cb101-2"><a href="#cb101-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">ent=</span>stringr<span class="sc">::</span><span class="fu">str_sub</span>(folioviv, <span class="at">start=</span><span class="dv">1</span>, <span class="at">end=</span><span class="dv">2</span> ))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>Más del paquete <code>{stringr}</code> <a href="https://stringr.tidyverse.org/">aquí</a></p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb102"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb102-1"><a href="#cb102-1" aria-hidden="true" tabindex="-1"></a>concentradohogar <span class="sc">%&gt;%</span> </span>
-<span id="cb102-2"><a href="#cb102-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(ent<span class="sc">%in%</span><span class="fu">c</span>(<span class="st">"09"</span>, <span class="st">"15"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 6,112 × 132
-   folioviv  foliohog ubica_geo tam_loc est_socio est_dis upm   factor clase_hog
-   &lt;chr&gt;     &lt;chr&gt;    &lt;chr&gt;     &lt;chr&gt;   &lt;chr&gt;     &lt;chr&gt;   &lt;chr&gt;  &lt;dbl&gt;     &lt;dbl&gt;
- 1 09000069… 1        09002     1       3         141     0003…   1578         3
- 2 09000069… 1        09002     1       3         141     0003…   1578         2
- 3 09000069… 1        09002     1       3         141     0003…   1578         3
- 4 09000069… 1        09002     1       3         141     0003…   1578         3
- 5 09000069… 1        09002     1       3         141     0003…   1578         3
- 6 09000069… 1        09002     1       3         141     0003…   1578         2
- 7 09000092… 1        09002     1       3         141     0003…   1474         2
- 8 09000092… 1        09002     1       3         141     0003…   1474         3
- 9 09000092… 1        09002     1       3         141     0003…   1474         1
-10 09000092… 1        09002     1       3         141     0003…   1474         2
-# ℹ 6,102 more rows
-# ℹ 123 more variables: sexo_jefe &lt;dbl&gt;, edad_jefe &lt;dbl&gt;, educa_jefe &lt;chr&gt;,
-#   tot_integ &lt;dbl&gt;, hombres &lt;dbl&gt;, mujeres &lt;dbl&gt;, mayores &lt;dbl&gt;,
-#   menores &lt;dbl&gt;, p12_64 &lt;dbl&gt;, p65mas &lt;dbl&gt;, ocupados &lt;dbl&gt;,
-#   percep_ing &lt;dbl&gt;, perc_ocupa &lt;dbl&gt;, ing_cor &lt;dbl&gt;, ingtrab &lt;dbl&gt;,
-#   trabajo &lt;dbl&gt;, sueldos &lt;dbl&gt;, horas_extr &lt;dbl&gt;, comisiones &lt;dbl&gt;,
-#   aguinaldo &lt;dbl&gt;, indemtrab &lt;dbl&gt;, otra_rem &lt;dbl&gt;, remu_espec &lt;dbl&gt;, …</code></pre>
-</div>
-</div>
-<p>Si queremos <em>negar</em> esta relación o casi cualquier otro filtro:</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb104"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb104-1"><a href="#cb104-1" aria-hidden="true" tabindex="-1"></a>concentradohogar <span class="sc">%&gt;%</span> </span>
-<span id="cb104-2"><a href="#cb104-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="sc">!</span>ent<span class="sc">%in%</span><span class="fu">c</span>(<span class="st">"09"</span>, <span class="st">"15"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 83,990 × 132
-   folioviv  foliohog ubica_geo tam_loc est_socio est_dis upm   factor clase_hog
-   &lt;chr&gt;     &lt;chr&gt;    &lt;chr&gt;     &lt;chr&gt;   &lt;chr&gt;     &lt;chr&gt;   &lt;chr&gt;  &lt;dbl&gt;     &lt;dbl&gt;
- 1 01000050… 1        01001     1       4         003     0000…    206         3
- 2 01000050… 1        01001     1       4         003     0000…    206         2
- 3 01000050… 1        01001     1       4         003     0000…    206         2
- 4 01000120… 1        01001     1       3         002     0000…    167         3
- 5 01000120… 2        01001     1       3         002     0000…    167         1
- 6 01000120… 1        01001     1       3         002     0000…    167         2
- 7 01000120… 1        01001     1       3         002     0000…    167         2
- 8 01000193… 1        01001     1       4         003     0000…    212         1
- 9 01000193… 1        01001     1       4         003     0000…    212         2
-10 01000193… 1        01001     1       4         003     0000…    212         2
-# ℹ 83,980 more rows
-# ℹ 123 more variables: sexo_jefe &lt;dbl&gt;, edad_jefe &lt;dbl&gt;, educa_jefe &lt;chr&gt;,
-#   tot_integ &lt;dbl&gt;, hombres &lt;dbl&gt;, mujeres &lt;dbl&gt;, mayores &lt;dbl&gt;,
-#   menores &lt;dbl&gt;, p12_64 &lt;dbl&gt;, p65mas &lt;dbl&gt;, ocupados &lt;dbl&gt;,
-#   percep_ing &lt;dbl&gt;, perc_ocupa &lt;dbl&gt;, ing_cor &lt;dbl&gt;, ingtrab &lt;dbl&gt;,
-#   trabajo &lt;dbl&gt;, sueldos &lt;dbl&gt;, horas_extr &lt;dbl&gt;, comisiones &lt;dbl&gt;,
-#   aguinaldo &lt;dbl&gt;, indemtrab &lt;dbl&gt;, otra_rem &lt;dbl&gt;, remu_espec &lt;dbl&gt;, …</code></pre>
-</div>
-</div>
-</section>
-<section id="is.na-y-sus-primos" class="level3" data-number="5.10.3">
-<h3 data-number="5.10.3" class="anchored" data-anchor-id="is.na-y-sus-primos"><span class="header-section-number">5.10.3</span> <code>is.na</code> y sus primos</h3>
+<section id="is.na-y-sus-primos" class="level3" data-number="5.7.1">
+<h3 data-number="5.7.1" class="anchored" data-anchor-id="is.na-y-sus-primos"><span class="header-section-number">5.7.1</span> <code>is.na</code> y sus primos</h3>
 <p>Si intentamos por ejemplo hacer un filtro para quitar los valores perdidos, no se puede hacer con <code>var==NA</code></p>
 <p>Hay un operador especial para decirnos si un valor es perdido o no.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb106"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb106-1"><a href="#cb106-1" aria-hidden="true" tabindex="-1"></a>vector<span class="ot">&lt;-</span><span class="fu">c</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>, <span class="cn">NA</span>, <span class="fu">sqrt</span>(<span class="sc">-</span><span class="dv">1</span>), <span class="dv">5</span><span class="sc">/</span><span class="dv">0</span>, <span class="sc">-</span><span class="dv">5</span><span class="sc">/</span><span class="dv">0</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb75"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb75-1"><a href="#cb75-1" aria-hidden="true" tabindex="-1"></a>vector<span class="ot">&lt;-</span><span class="fu">c</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>, <span class="cn">NA</span>, <span class="fu">sqrt</span>(<span class="sc">-</span><span class="dv">1</span>), <span class="dv">5</span><span class="sc">/</span><span class="dv">0</span>, <span class="sc">-</span><span class="dv">5</span><span class="sc">/</span><span class="dv">0</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
 <pre><code>Warning in sqrt(-1): Se han producido NaNs</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb108"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb108-1"><a href="#cb108-1" aria-hidden="true" tabindex="-1"></a>vector</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb77"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb77-1"><a href="#cb77-1" aria-hidden="true" tabindex="-1"></a>vector</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1]    1    2    3    4    5   NA  NaN  Inf -Inf</code></pre>
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb110"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb110-1"><a href="#cb110-1" aria-hidden="true" tabindex="-1"></a><span class="fu">is.na</span>(vector)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb79"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb79-1"><a href="#cb79-1" aria-hidden="true" tabindex="-1"></a><span class="fu">is.na</span>(vector)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] FALSE FALSE FALSE FALSE FALSE  TRUE  TRUE FALSE FALSE</code></pre>
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb112"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb112-1"><a href="#cb112-1" aria-hidden="true" tabindex="-1"></a><span class="fu">is.nan</span>(vector)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb81"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb81-1"><a href="#cb81-1" aria-hidden="true" tabindex="-1"></a><span class="fu">is.nan</span>(vector)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] FALSE FALSE FALSE FALSE FALSE FALSE  TRUE FALSE FALSE</code></pre>
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb114"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb114-1"><a href="#cb114-1" aria-hidden="true" tabindex="-1"></a><span class="fu">is.infinite</span>(vector)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb83"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb83-1"><a href="#cb83-1" aria-hidden="true" tabindex="-1"></a><span class="fu">is.infinite</span>(vector)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] FALSE FALSE FALSE FALSE FALSE FALSE FALSE  TRUE  TRUE</code></pre>
 </div>
 </div>
 <p>Como son condiciones, funcionan como filtros, esto es útil para quitarnos algunos valores perdidos de análisis</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb116"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb116-1"><a href="#cb116-1" aria-hidden="true" tabindex="-1"></a>concentradohogar <span class="sc">%&gt;%</span> </span>
-<span id="cb116-2"><a href="#cb116-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="sc">!</span><span class="fu">is.na</span>(ing_cor)) <span class="co"># no hay perdidos, hay 0</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb85"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb85-1"><a href="#cb85-1" aria-hidden="true" tabindex="-1"></a>concentradohogar <span class="sc">%&gt;%</span> </span>
+<span id="cb85-2"><a href="#cb85-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="sc">!</span><span class="fu">is.na</span>(ing_cor)) <span class="co"># no hay perdidos, hay 0</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 90,102 × 132
    folioviv  foliohog ubica_geo tam_loc est_socio est_dis upm   factor clase_hog
@@ -2016,70 +1733,15 @@ tab_footnote( footnote = paste(get_label(concentradohogar\$ing_cor)))</code></pr
 </div>
 </section>
 </section>
-<section id="agregados-1" class="level2" data-number="5.11">
-<h2 data-number="5.11" class="anchored" data-anchor-id="agregados-1"><span class="header-section-number">5.11</span> Agregados</h2>
-<section id="agregados-como-nuevo-dataframe-1" class="level3" data-number="5.11.1">
-<h3 data-number="5.11.1" class="anchored" data-anchor-id="agregados-como-nuevo-dataframe-1"><span class="header-section-number">5.11.1</span> Agregados como nuevo dataframe</h3>
-<p>El paquete <code>{collapse}</code> tiene muchas funciones para agregar datos. Esta es una operación que puede ser útil cuando queremos pasar de unidades más pequeñas a más grandes.</p>
-<p>Supongamos que necesitamos el total de personas mayores de 64 en cada hogar para pegárselo al concentrado:</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb118"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb118-1"><a href="#cb118-1" aria-hidden="true" tabindex="-1"></a>poblacion <span class="sc">%&gt;%</span> </span>
-<span id="cb118-2"><a href="#cb118-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">p65m=</span>edad<span class="sc">&gt;</span><span class="dv">64</span>) <span class="sc">%&gt;%</span> </span>
-<span id="cb118-3"><a href="#cb118-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(folioviv, foliohog, p65m) <span class="sc">%&gt;%</span> </span>
-<span id="cb118-4"><a href="#cb118-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(folioviv, foliohog) <span class="sc">%&gt;%</span> </span>
-<span id="cb118-5"><a href="#cb118-5" aria-hidden="true" tabindex="-1"></a>  collapse<span class="sc">::</span><span class="fu">fsum</span>() <span class="ot">-&gt;</span>p65m_hog</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p><code>fsum()</code> permite utilizar pesos y además hará la suma para cualquier variable. Por ejemplo podríamos dejar crear una variable para el tamaño del hogar</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb119"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb119-1"><a href="#cb119-1" aria-hidden="true" tabindex="-1"></a>poblacion <span class="sc">%&gt;%</span> </span>
-<span id="cb119-2"><a href="#cb119-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">p65m=</span>edad<span class="sc">&gt;</span><span class="dv">64</span>) <span class="sc">%&gt;%</span> </span>
-<span id="cb119-3"><a href="#cb119-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">residente=</span><span class="dv">1</span>) <span class="sc">%&gt;%</span> </span>
-<span id="cb119-4"><a href="#cb119-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(folioviv, foliohog, p65m, residente) <span class="sc">%&gt;%</span> </span>
-<span id="cb119-5"><a href="#cb119-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(folioviv, foliohog) <span class="sc">%&gt;%</span> </span>
-<span id="cb119-6"><a href="#cb119-6" aria-hidden="true" tabindex="-1"></a>  collapse<span class="sc">::</span><span class="fu">fsum</span>() <span class="ot">-&gt;</span>pob_hog</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>También hay otros comandos para hacer promedios y más</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb120"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb120-1"><a href="#cb120-1" aria-hidden="true" tabindex="-1"></a>poblacion <span class="sc">%&gt;%</span> </span>
-<span id="cb120-2"><a href="#cb120-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(folioviv, foliohog, edad, ) <span class="sc">%&gt;%</span> </span>
-<span id="cb120-3"><a href="#cb120-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(folioviv, foliohog) <span class="sc">%&gt;%</span> </span>
-<span id="cb120-4"><a href="#cb120-4" aria-hidden="true" tabindex="-1"></a>  collapse<span class="sc">::</span><span class="fu">fmean</span>() <span class="ot">-&gt;</span>eda_hog</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section>
-<section id="agregados-dentro-del-mismo-dataframe-1" class="level3" data-number="5.11.2">
-<h3 data-number="5.11.2" class="anchored" data-anchor-id="agregados-dentro-del-mismo-dataframe-1"><span class="header-section-number">5.11.2</span> Agregados dentro del mismo dataframe</h3>
-<p>En sociodemografía es muy muy común que nos importen algunas condiciones e interrelaciones entre los miembros de un hogar. Entonces a veces estudiamos los atributos del hogar como variables de cada individuo, por lo que necesitamos que estén en la misma base.</p>
-<p>Podríamos hacer el merge de los <em>dataframes</em> creados en el apartado anterior y los de población, pero también podemos hacer los estimados dentro de la misma base, así que crearemos variables nuevas</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb121"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb121-1"><a href="#cb121-1" aria-hidden="true" tabindex="-1"></a>poblacion <span class="sc">%&lt;&gt;%</span> </span>
-<span id="cb121-2"><a href="#cb121-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(folioviv, foliohog) <span class="sc">%&gt;%</span> </span>
-<span id="cb121-3"><a href="#cb121-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">mean_edad=</span><span class="fu">mean</span>(edad)) <span class="sc">%&gt;%</span> </span>
-<span id="cb121-4"><a href="#cb121-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ungroup</span>() <span class="co"># esto es importante</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>Equivalente</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb122"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb122-1"><a href="#cb122-1" aria-hidden="true" tabindex="-1"></a>poblacion <span class="sc">%&lt;&gt;%</span> </span>
-<span id="cb122-2"><a href="#cb122-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">mean_edad=</span><span class="fu">mean</span>(edad), <span class="at">.by=</span> <span class="fu">c</span>(folioviv, foliohog))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>El puntito en <code>.by</code> es fundamental, sin eso queda agrupado</p>
-<p>Podemos hacer también más operaciones</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb123"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb123-1"><a href="#cb123-1" aria-hidden="true" tabindex="-1"></a>poblacion <span class="sc">%&lt;&gt;%</span> </span>
-<span id="cb123-2"><a href="#cb123-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(folioviv, foliohog) <span class="sc">%&gt;%</span> </span>
-<span id="cb123-3"><a href="#cb123-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">mean_edad=</span><span class="fu">mean</span>(edad)) <span class="sc">%&gt;%</span> </span>
-<span id="cb123-4"><a href="#cb123-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ungroup</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section>
-</section>
-<section id="at-muchas-operaciones-de-dplyr-1" class="level2" data-number="5.12">
-<h2 data-number="5.12" class="anchored" data-anchor-id="at-muchas-operaciones-de-dplyr-1"><span class="header-section-number">5.12</span> _at muchas operaciones de <code>{dplyr}</code></h2>
+<section id="at-muchas-operaciones-de-dplyr" class="level2" data-number="5.8">
+<h2 data-number="5.8" class="anchored" data-anchor-id="at-muchas-operaciones-de-dplyr"><span class="header-section-number">5.8</span> _at muchas operaciones de <code>{dplyr}</code></h2>
 <p>Este es un sufijo que funciona en algunos verbos de <code>{dplyr}</code> y permite hacer una operación en varias variables al mismo tiempo, funciona con vars()</p>
-<section id="dplyrmutate_at-1" class="level3" data-number="5.12.1">
-<h3 data-number="5.12.1" class="anchored" data-anchor-id="dplyrmutate_at-1"><span class="header-section-number">5.12.1</span> <code>dplyr::mutate_at()</code></h3>
+<section id="dplyrmutate_at" class="level3" data-number="5.8.1">
+<h3 data-number="5.8.1" class="anchored" data-anchor-id="dplyrmutate_at"><span class="header-section-number">5.8.1</span> <code>dplyr::mutate_at()</code></h3>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb124"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb124-1"><a href="#cb124-1" aria-hidden="true" tabindex="-1"></a>concentradohogar <span class="sc">%&gt;%</span> </span>
-<span id="cb124-2"><a href="#cb124-2" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">mutate_at</span>(<span class="fu">vars</span>(clase_hog, sexo_jefe), <span class="sc">~</span> <span class="fu">as_label</span>(.x)) <span class="sc">%&gt;%</span> <span class="co"># ojo con la coma y con el punto</span></span>
-<span id="cb124-3"><a href="#cb124-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tabyl</span>(clase_hog, sexo_jefe)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb87"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb87-1"><a href="#cb87-1" aria-hidden="true" tabindex="-1"></a>concentradohogar <span class="sc">%&gt;%</span> </span>
+<span id="cb87-2"><a href="#cb87-2" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">mutate_at</span>(<span class="fu">vars</span>(clase_hog, sexo_jefe), <span class="sc">~</span> <span class="fu">as_label</span>(.x)) <span class="sc">%&gt;%</span> <span class="co"># ojo con la coma y con el punto</span></span>
+<span id="cb87-3"><a href="#cb87-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tabyl</span>(clase_hog, sexo_jefe)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>    clase_hog Hombre Mujer
   unipersonal   6519  5367
@@ -2090,27 +1752,27 @@ tab_footnote( footnote = paste(get_label(concentradohogar\$ing_cor)))</code></pr
 </div>
 </div>
 </section>
-<section id="dplyrrename_at-1" class="level3" data-number="5.12.2">
-<h3 data-number="5.12.2" class="anchored" data-anchor-id="dplyrrename_at-1"><span class="header-section-number">5.12.2</span> <code>dplyr::rename_at()</code></h3>
+<section id="dplyrrename_at" class="level3" data-number="5.8.2">
+<h3 data-number="5.8.2" class="anchored" data-anchor-id="dplyrrename_at"><span class="header-section-number">5.8.2</span> <code>dplyr::rename_at()</code></h3>
 <p>Primero revisemos la opción paste y paste0</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb126"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb126-1"><a href="#cb126-1" aria-hidden="true" tabindex="-1"></a><span class="fu">paste</span>(<span class="st">"a"</span>,<span class="st">"b"</span>, <span class="at">sep=</span><span class="st">"_"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb89"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb89-1"><a href="#cb89-1" aria-hidden="true" tabindex="-1"></a><span class="fu">paste</span>(<span class="st">"a"</span>,<span class="st">"b"</span>, <span class="at">sep=</span><span class="st">"_"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "a_b"</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb128"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb128-1"><a href="#cb128-1" aria-hidden="true" tabindex="-1"></a><span class="fu">paste</span>(<span class="st">"a"</span>,<span class="st">"b"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb91"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb91-1"><a href="#cb91-1" aria-hidden="true" tabindex="-1"></a><span class="fu">paste</span>(<span class="st">"a"</span>,<span class="st">"b"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "a b"</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb130"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb130-1"><a href="#cb130-1" aria-hidden="true" tabindex="-1"></a><span class="fu">paste0</span>(<span class="st">"a"</span>,<span class="st">"b"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb93"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb93-1"><a href="#cb93-1" aria-hidden="true" tabindex="-1"></a><span class="fu">paste0</span>(<span class="st">"a"</span>,<span class="st">"b"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "ab"</code></pre>
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb132"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb132-1"><a href="#cb132-1" aria-hidden="true" tabindex="-1"></a>concentradohogar <span class="sc">%&gt;%</span> </span>
-<span id="cb132-2"><a href="#cb132-2" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">rename_at</span>(<span class="fu">vars</span>(clase_hog, sexo_jefe), <span class="sc">~</span> <span class="fu">paste0</span>(.x, <span class="st">"_"</span>)) <span class="sc">%&gt;%</span> <span class="co"># sufijo</span></span>
-<span id="cb132-3"><a href="#cb132-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(clase_hog_, sexo_jefe_)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb95"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb95-1"><a href="#cb95-1" aria-hidden="true" tabindex="-1"></a>concentradohogar <span class="sc">%&gt;%</span> </span>
+<span id="cb95-2"><a href="#cb95-2" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">rename_at</span>(<span class="fu">vars</span>(clase_hog, sexo_jefe), <span class="sc">~</span> <span class="fu">paste0</span>(.x, <span class="st">"_"</span>)) <span class="sc">%&gt;%</span> <span class="co"># sufijo</span></span>
+<span id="cb95-3"><a href="#cb95-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(clase_hog_, sexo_jefe_)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 90,102 × 2
    clase_hog_ sexo_jefe_
@@ -2129,9 +1791,9 @@ tab_footnote( footnote = paste(get_label(concentradohogar\$ing_cor)))</code></pr
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb134"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb134-1"><a href="#cb134-1" aria-hidden="true" tabindex="-1"></a>concentradohogar <span class="sc">%&gt;%</span> </span>
-<span id="cb134-2"><a href="#cb134-2" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">rename_at</span>(<span class="fu">vars</span>(clase_hog, sexo_jefe), <span class="sc">~</span> <span class="fu">paste0</span>(<span class="st">"desc_"</span>, .x)) <span class="sc">%&gt;%</span> <span class="co"># prefijo</span></span>
-<span id="cb134-3"><a href="#cb134-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="fu">starts_with</span>(<span class="st">"desc"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb97"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb97-1"><a href="#cb97-1" aria-hidden="true" tabindex="-1"></a>concentradohogar <span class="sc">%&gt;%</span> </span>
+<span id="cb97-2"><a href="#cb97-2" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">rename_at</span>(<span class="fu">vars</span>(clase_hog, sexo_jefe), <span class="sc">~</span> <span class="fu">paste0</span>(<span class="st">"desc_"</span>, .x)) <span class="sc">%&gt;%</span> <span class="co"># prefijo</span></span>
+<span id="cb97-3"><a href="#cb97-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="fu">starts_with</span>(<span class="st">"desc"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 90,102 × 2
    desc_clase_hog desc_sexo_jefe
@@ -2151,54 +1813,12 @@ tab_footnote( footnote = paste(get_label(concentradohogar\$ing_cor)))</code></pr
 </div>
 </section>
 </section>
-<section id="descriptivos-para-variables-cuantitativas-1" class="level2" data-number="5.13">
-<h2 data-number="5.13" class="anchored" data-anchor-id="descriptivos-para-variables-cuantitativas-1"><span class="header-section-number">5.13</span> Descriptivos para variables cuantitativas</h2>
+<section id="descriptivos-para-variables-cuantitativas" class="level2" data-number="5.9">
+<h2 data-number="5.9" class="anchored" data-anchor-id="descriptivos-para-variables-cuantitativas"><span class="header-section-number">5.9</span> Descriptivos para variables cuantitativas</h2>
 <p>Vamos a empezar a revisar los gráficos para variables cuantitativas.</p>
-<section id="medidas-numéricas-básicas-1" class="level3" data-number="5.13.1">
-<h3 data-number="5.13.1" class="anchored" data-anchor-id="medidas-numéricas-básicas-1"><span class="header-section-number">5.13.1</span> Medidas numéricas básicas</h3>
-<p>5 números</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb136"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb136-1"><a href="#cb136-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(concentradohogar<span class="sc">$</span>ing_cor) <span class="do">## ingresos</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
-      0   28386   46074   61490   74344 7153770 </code></pre>
-</div>
-</div>
-<p>Con pipes se pueden crear “indicadores” de nuestras variables es un tibble, tal como lo hicimos con el diseño complejo</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb138"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb138-1"><a href="#cb138-1" aria-hidden="true" tabindex="-1"></a>concentradohogar <span class="sc">%&gt;%</span> </span>
-<span id="cb138-2"><a href="#cb138-2" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">summarise</span>(<span class="at">nombre_indicador=</span><span class="fu">mean</span>(ing_cor, <span class="at">na.rm=</span>T)) <span class="co"># las funciones también pueden tener atributos</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 1 × 1
-  nombre_indicador
-             &lt;dbl&gt;
-1           61490.</code></pre>
-</div>
-</div>
-<p>Funciona con <code>group_by()</code> y con <code>.by()</code></p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb140"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb140-1"><a href="#cb140-1" aria-hidden="true" tabindex="-1"></a>concentradohogar <span class="sc">%&gt;%</span> </span>
-<span id="cb140-2"><a href="#cb140-2" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">summarise</span>(<span class="at">nombre_indicador=</span><span class="fu">mean</span>(ing_cor, <span class="at">na.rm=</span>T), <span class="at">.by=</span>ent) <span class="co"># las funciones también pueden tener atributos</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 32 × 2
-   ent   nombre_indicador
-   &lt;chr&gt;            &lt;dbl&gt;
- 1 01              73162.
- 2 02              80341.
- 3 03              87777.
- 4 04              57921.
- 5 05              69761.
- 6 06              63841.
- 7 07              40765.
- 8 08              73981.
- 9 09              77909.
-10 10              53608.
-# ℹ 22 more rows</code></pre>
-</div>
-</div>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb142"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb142-1"><a href="#cb142-1" aria-hidden="true" tabindex="-1"></a>concentradohogar <span class="sc">%&gt;%</span> </span>
-<span id="cb142-2"><a href="#cb142-2" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">summarise_at</span>(<span class="fu">vars</span>(<span class="fu">contains</span>(<span class="st">"ing"</span>)), <span class="sc">~</span> <span class="fu">mean</span>(.x)) <span class="co"># las funciones también pueden tener atributos</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb99"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb99-1"><a href="#cb99-1" aria-hidden="true" tabindex="-1"></a>concentradohogar <span class="sc">%&gt;%</span> </span>
+<span id="cb99-2"><a href="#cb99-2" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">summarise_at</span>(<span class="fu">vars</span>(<span class="fu">contains</span>(<span class="st">"ing"</span>)), <span class="sc">~</span> <span class="fu">mean</span>(.x)) <span class="co"># las funciones también pueden tener atributos</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 1 × 4
   percep_ing ing_cor ingtrab otros_ing
@@ -2208,7 +1828,6 @@ tab_footnote( footnote = paste(get_label(concentradohogar\$ing_cor)))</code></pr
 </div>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->
@@ -2567,6 +2186,9 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </a>          
   </div>
   <div class="nav-page nav-page-next">
+      <a href="./P6.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Análisis descriptivo II</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
   </div>
 </nav>
 </div> <!-- /content -->
