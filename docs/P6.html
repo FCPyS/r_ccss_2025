@@ -64,6 +64,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
+<link href="./P7.html" rel="next">
 <link href="./P5.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -186,6 +187,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
  <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Análisis descriptivo II</span></span></a>
   </div>
 </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./P7.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Cont bivariado e intro a inferencia estadística</span></span></a>
+  </div>
+</li>
     </ul>
     </div>
 </nav>
@@ -225,8 +232,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </ul></li>
   <li><a href="#temas" id="toc-temas" class="nav-link" data-scroll-target="#temas"><span class="header-section-number">6.12</span> Temas</a></li>
   <li><a href="#un-atajo-esquisse" id="toc-un-atajo-esquisse" class="nav-link" data-scroll-target="#un-atajo-esquisse"><span class="header-section-number">6.13</span> Un atajo <code>{esquisse}</code></a></li>
-  <li><a href="#otro-atajo-ggally" id="toc-otro-atajo-ggally" class="nav-link" data-scroll-target="#otro-atajo-ggally"><span class="header-section-number">6.14</span> Otro atajo <code>{GGally}</code></a></li>
-  <li><a href="#ejercicio" id="toc-ejercicio" class="nav-link" data-scroll-target="#ejercicio"><span class="header-section-number">6.15</span> Ejercicio</a></li>
+  <li><a href="#ejercicio" id="toc-ejercicio" class="nav-link" data-scroll-target="#ejercicio"><span class="header-section-number">6.14</span> Ejercicio</a></li>
   </ul>
 <div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/fcpys/r_ccss_2025/edit/main/P6.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/fcpys/r_ccss_2025/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
     </div>
@@ -745,51 +751,8 @@ $AsteroidCity3
 <p>Una vez seleccionada, puedes hacer “drag and drop” de las variables y elegir el tipo de gráfico, incluso puedes hacer filtro con las variables disponibles</p>
 <p>Puedes exportar esto a una imagen, a Powerpoint o como código a ejecutar en RStudio. Esta herramienta es muy útil para irnos acostumbrando al código de ggplot que puede ser bastante complicado en los primeros acercamientos</p>
 </section>
-<section id="otro-atajo-ggally" class="level2" data-number="6.14">
-<h2 data-number="6.14" class="anchored" data-anchor-id="otro-atajo-ggally"><span class="header-section-number">6.14</span> Otro atajo <code>{GGally}</code></h2>
-<p>De acuerdo con sus <a href="https://ggobi.github.io/ggally/index.html">creadores</a></p>
-<blockquote class="blockquote">
-<p><code>{ggplot2}</code> es un sistema de trazado para R basado en la gramática de los gráficos. <code>{GGally}</code> extiende <code>{ggplot2}</code> agregando varias funciones para reducir la complejidad de combinar geoms con datos transformados. Algunas de estas funciones incluyen una matriz de gráficos por pares, una matriz de diagramas de dispersión, un gráfico de coordenadas paralelas, un gráfico de supervivencia y varias funciones para trazar redes.</p>
-</blockquote>
-<p>Vamos a ver un par de ejemplos</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb45"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb45-1"><a href="#cb45-1" aria-hidden="true" tabindex="-1"></a>concentradohogar <span class="sc">%&gt;%</span> </span>
-<span id="cb45-2"><a href="#cb45-2" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">select</span>(ing_cor, gasto_mon, tot_integ) <span class="sc">%&gt;%</span> </span>
-<span id="cb45-3"><a href="#cb45-3" aria-hidden="true" tabindex="-1"></a>  GGally<span class="sc">::</span><span class="fu">ggpairs</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<p><img src="P6_files/figure-html/unnamed-chunk-32-1.png" class="img-fluid" width="672"></p>
-</div>
-</div>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb46"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a>concentradohogar <span class="sc">%&gt;%</span> </span>
-<span id="cb46-2"><a href="#cb46-2" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">mutate_at</span>(<span class="fu">vars</span>(sexo_jefe,educa_jefe), <span class="sc">~</span> <span class="fu">as_label</span>(.x)) <span class="sc">%&gt;%</span> </span>
-<span id="cb46-3"><a href="#cb46-3" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">select</span>(ing_cor, tot_integ, sexo_jefe, educa_jefe) <span class="sc">%&gt;%</span> </span>
-<span id="cb46-4"><a href="#cb46-4" aria-hidden="true" tabindex="-1"></a>  GGally<span class="sc">::</span><span class="fu">ggpairs</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>`stat_bin()` using `bins = 30`. Pick better value with `binwidth`.
-`stat_bin()` using `bins = 30`. Pick better value with `binwidth`.
-`stat_bin()` using `bins = 30`. Pick better value with `binwidth`.
-`stat_bin()` using `bins = 30`. Pick better value with `binwidth`.</code></pre>
-</div>
-<div class="cell-output-display">
-<p><img src="P6_files/figure-html/unnamed-chunk-33-1.png" class="img-fluid" width="672"></p>
-</div>
-</div>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb48"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb48-1"><a href="#cb48-1" aria-hidden="true" tabindex="-1"></a>concentradohogar <span class="sc">%&gt;%</span> </span>
-<span id="cb48-2"><a href="#cb48-2" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">mutate_at</span>(<span class="fu">vars</span>(sexo_jefe,educa_jefe), <span class="sc">~</span> <span class="fu">as_label</span>(.x)) <span class="sc">%&gt;%</span> </span>
-<span id="cb48-3"><a href="#cb48-3" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">select</span>(ing_cor, gasto_mon, tot_integ, sexo_jefe) <span class="sc">%&gt;%</span> </span>
-<span id="cb48-4"><a href="#cb48-4" aria-hidden="true" tabindex="-1"></a>  GGally<span class="sc">::</span><span class="fu">ggpairs</span>(<span class="at">columns =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">3</span>, <span class="co"># las primeras tres van en la cuadrícula</span></span>
-<span id="cb48-5"><a href="#cb48-5" aria-hidden="true" tabindex="-1"></a>                  ggplot2<span class="sc">::</span><span class="fu">aes</span>(<span class="at">color =</span> sexo_jefe,</span>
-<span id="cb48-6"><a href="#cb48-6" aria-hidden="true" tabindex="-1"></a>                               <span class="at">fill =</span> sexo_jefe, <span class="co"># aquí van colores</span></span>
-<span id="cb48-7"><a href="#cb48-7" aria-hidden="true" tabindex="-1"></a>                               <span class="at">alpha =</span> <span class="fu">I</span>(<span class="fl">0.4</span>))) <span class="co"># aquí la transparencia</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<p><img src="P6_files/figure-html/unnamed-chunk-34-1.png" class="img-fluid" width="672"></p>
-</div>
-</div>
-</section>
-<section id="ejercicio" class="level2" data-number="6.15">
-<h2 data-number="6.15" class="anchored" data-anchor-id="ejercicio"><span class="header-section-number">6.15</span> Ejercicio</h2>
+<section id="ejercicio" class="level2" data-number="6.14">
+<h2 data-number="6.14" class="anchored" data-anchor-id="ejercicio"><span class="header-section-number">6.14</span> Ejercicio</h2>
 <p>Realiza <strong>dos</strong> gráficos.</p>
 <ol type="1">
 <li><p>Uno de una sola variable</p></li>
@@ -1160,6 +1123,9 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </a>          
   </div>
   <div class="nav-page nav-page-next">
+      <a href="./P7.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Cont bivariado e intro a inferencia estadística</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
   </div>
 </nav>
 </div> <!-- /content -->
