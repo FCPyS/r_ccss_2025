@@ -64,6 +64,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
+<link href="./P9.html" rel="next">
 <link href="./P7.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -200,6 +201,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
  <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Regresión lineal (I)</span></span></a>
   </div>
 </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./P9.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Regresión lineal (II)</span></span></a>
+  </div>
+</li>
     </ul>
     </div>
 </nav>
@@ -213,24 +220,23 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#paquetes" id="toc-paquetes" class="nav-link active" data-scroll-target="#paquetes"><span class="header-section-number">8.1</span> Paquetes</a></li>
   <li><a href="#datos" id="toc-datos" class="nav-link" data-scroll-target="#datos"><span class="header-section-number">8.2</span> Datos</a></li>
   <li><a href="#sub-setting-para-comparar-modelos" id="toc-sub-setting-para-comparar-modelos" class="nav-link" data-scroll-target="#sub-setting-para-comparar-modelos"><span class="header-section-number">8.3</span> Sub-setting para comparar modelos</a></li>
-  <li><a href="#regresión-lineal" id="toc-regresión-lineal" class="nav-link" data-scroll-target="#regresión-lineal"><span class="header-section-number">9</span> Regresión lineal</a>
+  <li><a href="#regresión-lineal" id="toc-regresión-lineal" class="nav-link" data-scroll-target="#regresión-lineal"><span class="header-section-number">8.4</span> Regresión lineal</a>
   <ul class="collapse">
-  <li><a href="#repaso-regresión-lineal-simple" id="toc-repaso-regresión-lineal-simple" class="nav-link" data-scroll-target="#repaso-regresión-lineal-simple"><span class="header-section-number">9.1</span> Repaso Regresión lineal simple</a></li>
-  <li><a href="#diagnósticos" id="toc-diagnósticos" class="nav-link" data-scroll-target="#diagnósticos"><span class="header-section-number">9.2</span> Diagnósticos</a></li>
-  <li><a href="#outliers-y-normalidad" id="toc-outliers-y-normalidad" class="nav-link" data-scroll-target="#outliers-y-normalidad"><span class="header-section-number">9.3</span> Outliers y Normalidad</a></li>
-  <li><a href="#homocedasticidad" id="toc-homocedasticidad" class="nav-link" data-scroll-target="#homocedasticidad"><span class="header-section-number">9.4</span> Homocedasticidad</a></li>
+  <li><a href="#repaso-regresión-lineal-simple" id="toc-repaso-regresión-lineal-simple" class="nav-link" data-scroll-target="#repaso-regresión-lineal-simple"><span class="header-section-number">8.4.1</span> Repaso Regresión lineal simple</a></li>
+  <li><a href="#diagnósticos" id="toc-diagnósticos" class="nav-link" data-scroll-target="#diagnósticos"><span class="header-section-number">8.4.2</span> Diagnósticos</a></li>
+  <li><a href="#outliers-y-normalidad" id="toc-outliers-y-normalidad" class="nav-link" data-scroll-target="#outliers-y-normalidad"><span class="header-section-number">8.4.3</span> Outliers y Normalidad</a></li>
+  <li><a href="#homocedasticidad" id="toc-homocedasticidad" class="nav-link" data-scroll-target="#homocedasticidad"><span class="header-section-number">8.4.4</span> Homocedasticidad</a></li>
   </ul></li>
-  <li><a href="#regresión-lineal-múltiple" id="toc-regresión-lineal-múltiple" class="nav-link" data-scroll-target="#regresión-lineal-múltiple"><span class="header-section-number">10</span> Regresión Lineal múltiple</a>
+  <li><a href="#regresión-lineal-múltiple" id="toc-regresión-lineal-múltiple" class="nav-link" data-scroll-target="#regresión-lineal-múltiple"><span class="header-section-number">8.5</span> Regresión Lineal múltiple</a>
   <ul class="collapse">
-  <li><a href="#agregando-una-variable-categórica" id="toc-agregando-una-variable-categórica" class="nav-link" data-scroll-target="#agregando-una-variable-categórica"><span class="header-section-number">10.1</span> Agregando una variable categórica</a></li>
-  <li><a href="#otros-supuestos" id="toc-otros-supuestos" class="nav-link" data-scroll-target="#otros-supuestos"><span class="header-section-number">10.2</span> Otros supuestos</a></li>
-  <li><a href="#paquete-performance" id="toc-paquete-performance" class="nav-link" data-scroll-target="#paquete-performance"><span class="header-section-number">10.3</span> Paquete <code>{performance}</code></a>
+  <li><a href="#agregando-una-variable-categórica" id="toc-agregando-una-variable-categórica" class="nav-link" data-scroll-target="#agregando-una-variable-categórica"><span class="header-section-number">8.5.1</span> Agregando una variable categórica</a></li>
+  <li><a href="#otros-supuestos" id="toc-otros-supuestos" class="nav-link" data-scroll-target="#otros-supuestos"><span class="header-section-number">8.5.2</span> Otros supuestos</a></li>
+  </ul></li>
+  <li><a href="#paquete-performance" id="toc-paquete-performance" class="nav-link" data-scroll-target="#paquete-performance"><span class="header-section-number">8.6</span> Paquete <code>{performance}</code></a>
   <ul class="collapse">
-  <li><a href="#supuesto" id="toc-supuesto" class="nav-link" data-scroll-target="#supuesto"><span class="header-section-number">10.3.1</span> Supuesto</a></li>
-  <li><a href="#visualización" id="toc-visualización" class="nav-link" data-scroll-target="#visualización"><span class="header-section-number">10.3.2</span> Visualización</a></li>
+  <li><a href="#supuestos" id="toc-supuestos" class="nav-link" data-scroll-target="#supuestos"><span class="header-section-number">8.6.1</span> Supuestos</a></li>
   </ul></li>
-  <li><a href="#ejercicio" id="toc-ejercicio" class="nav-link" data-scroll-target="#ejercicio"><span class="header-section-number">10.4</span> Ejercicio</a></li>
-  </ul></li>
+  <li><a href="#ejercicio" id="toc-ejercicio" class="nav-link" data-scroll-target="#ejercicio"><span class="header-section-number">8.7</span> Ejercicio</a></li>
   </ul>
 <div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/fcpys/r_ccss_2025/edit/main/P8.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/fcpys/r_ccss_2025/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
     </div>
@@ -405,10 +411,10 @@ sample estimates:
 </div>
 <p>Ojo:Un resultado significativo de una relación débil.</p>
 </section>
-<section id="regresión-lineal" class="level1" data-number="9">
-<h1 data-number="9"><span class="header-section-number">9</span> Regresión lineal</h1>
-<section id="repaso-regresión-lineal-simple" class="level2" data-number="9.1">
-<h2 data-number="9.1" class="anchored" data-anchor-id="repaso-regresión-lineal-simple"><span class="header-section-number">9.1</span> Repaso Regresión lineal simple</h2>
+<section id="regresión-lineal" class="level2" data-number="8.4">
+<h2 data-number="8.4" class="anchored" data-anchor-id="regresión-lineal"><span class="header-section-number">8.4</span> Regresión lineal</h2>
+<section id="repaso-regresión-lineal-simple" class="level3" data-number="8.4.1">
+<h3 data-number="8.4.1" class="anchored" data-anchor-id="repaso-regresión-lineal-simple"><span class="header-section-number">8.4.1</span> Repaso Regresión lineal simple</h3>
 <p><span class="math display">\[y=\beta_o+\beta_1x +\epsilon\]</span></p>
 <p>Donde los parámetros <span class="math inline">\(\beta_o\)</span> y <span class="math inline">\(\beta_1\)</span> describen la pendiente y el intercepto de la población, respectivamente.</p>
 <p>La regresión lineal nos ayuda a describir una relación a través de una línea recta.</p>
@@ -502,8 +508,8 @@ edad_jefe   0.004615605 0.005258741</code></pre>
 </div>
 </div>
 </section>
-<section id="diagnósticos" class="level2" data-number="9.2">
-<h2 data-number="9.2" class="anchored" data-anchor-id="diagnósticos"><span class="header-section-number">9.2</span> Diagnósticos</h2>
+<section id="diagnósticos" class="level3" data-number="8.4.2">
+<h3 data-number="8.4.2" class="anchored" data-anchor-id="diagnósticos"><span class="header-section-number">8.4.2</span> Diagnósticos</h3>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(modelo)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
@@ -520,8 +526,8 @@ edad_jefe   0.004615605 0.005258741</code></pre>
 </div>
 </div>
 </section>
-<section id="outliers-y-normalidad" class="level2" data-number="9.3">
-<h2 data-number="9.3" class="anchored" data-anchor-id="outliers-y-normalidad"><span class="header-section-number">9.3</span> Outliers y Normalidad</h2>
+<section id="outliers-y-normalidad" class="level3" data-number="8.4.3">
+<h3 data-number="8.4.3" class="anchored" data-anchor-id="outliers-y-normalidad"><span class="header-section-number">8.4.3</span> Outliers y Normalidad</h3>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb23"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>car<span class="sc">::</span><span class="fu">outlierTest</span>(modelo) <span class="co"># Bonferonni p-value for most extreme obs</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -563,8 +569,8 @@ edad_jefe   0.004615605 0.005258741</code></pre>
 </div>
 </div>
 </section>
-<section id="homocedasticidad" class="level2" data-number="9.4">
-<h2 data-number="9.4" class="anchored" data-anchor-id="homocedasticidad"><span class="header-section-number">9.4</span> Homocedasticidad</h2>
+<section id="homocedasticidad" class="level3" data-number="8.4.4">
+<h3 data-number="8.4.4" class="anchored" data-anchor-id="homocedasticidad"><span class="header-section-number">8.4.4</span> Homocedasticidad</h3>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb32"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a>car<span class="sc">::</span><span class="fu">ncvTest</span>(modelo)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -648,10 +654,10 @@ Largest |rstudent|:
 <p>¡Este puede ser un proceso infinito! Si quitamos lo anormal, esto mueve nuestros rangos y al quitar un outlier, otra variable que antes no era outlier en el ajuste se puede convertir en outlier.</p>
 </section>
 </section>
-<section id="regresión-lineal-múltiple" class="level1" data-number="10">
-<h1 data-number="10"><span class="header-section-number">10</span> Regresión Lineal múltiple</h1>
-<section id="agregando-una-variable-categórica" class="level2" data-number="10.1">
-<h2 data-number="10.1" class="anchored" data-anchor-id="agregando-una-variable-categórica"><span class="header-section-number">10.1</span> Agregando una variable categórica</h2>
+<section id="regresión-lineal-múltiple" class="level2" data-number="8.5">
+<h2 data-number="8.5" class="anchored" data-anchor-id="regresión-lineal-múltiple"><span class="header-section-number">8.5</span> Regresión Lineal múltiple</h2>
+<section id="agregando-una-variable-categórica" class="level3" data-number="8.5.1">
+<h3 data-number="8.5.1" class="anchored" data-anchor-id="agregando-una-variable-categórica"><span class="header-section-number">8.5.1</span> Agregando una variable categórica</h3>
 <p>Sexo divide a nuestra población en dos grupos</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb46"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a>mydata <span class="sc">%&gt;%</span> </span>
@@ -795,8 +801,8 @@ F-statistic:  6384 on 3 and 90089 DF,  p-value: &lt; 2.2e-16</code></pre>
 </div>
 <p>Hoy que tenemos más variables podemos hablar de revisar dos supuestos más.</p>
 </section>
-<section id="otros-supuestos" class="level2" data-number="10.2">
-<h2 data-number="10.2" class="anchored" data-anchor-id="otros-supuestos"><span class="header-section-number">10.2</span> Otros supuestos</h2>
+<section id="otros-supuestos" class="level3" data-number="8.5.2">
+<h3 data-number="8.5.2" class="anchored" data-anchor-id="otros-supuestos"><span class="header-section-number">8.5.2</span> Otros supuestos</h3>
 <p>Además de los supuestos de la regresión simple, podemos revisar estos otros. De nuevo, usaremos el paquete <code>{car}</code></p>
 <ol type="1">
 <li><p>Linealidad en los parámetros (será más díficil entre más variables tengamos)</p></li>
@@ -813,10 +819,11 @@ F-statistic:  6384 on 3 and 90089 DF,  p-value: &lt; 2.2e-16</code></pre>
 </div>
 <p>Donde <span class="math display">\[VIF = \frac{1}{1-{R_j}^2}\]</span></p>
 </section>
-<section id="paquete-performance" class="level2" data-number="10.3">
-<h2 data-number="10.3" class="anchored" data-anchor-id="paquete-performance"><span class="header-section-number">10.3</span> Paquete <code>{performance}</code></h2>
-<section id="supuesto" class="level3" data-number="10.3.1">
-<h3 data-number="10.3.1" class="anchored" data-anchor-id="supuesto"><span class="header-section-number">10.3.1</span> Supuesto</h3>
+</section>
+<section id="paquete-performance" class="level2" data-number="8.6">
+<h2 data-number="8.6" class="anchored" data-anchor-id="paquete-performance"><span class="header-section-number">8.6</span> Paquete <code>{performance}</code></h2>
+<section id="supuestos" class="level3" data-number="8.6.1">
+<h3 data-number="8.6.1" class="anchored" data-anchor-id="supuestos"><span class="header-section-number">8.6.1</span> Supuestos</h3>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb59"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb59-1"><a href="#cb59-1" aria-hidden="true" tabindex="-1"></a>performance<span class="sc">::</span><span class="fu">check_outliers</span>(modelo2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -849,9 +856,8 @@ F-statistic:  6384 on 3 and 90089 DF,  p-value: &lt; 2.2e-16</code></pre>
 </div>
 </div>
 <p>La tolerancia es inverso multiplicativo de VIF, es decir $1-{R_j}^2 $</p>
-</section>
-<section id="visualización" class="level3" data-number="10.3.2">
-<h3 data-number="10.3.2" class="anchored" data-anchor-id="visualización"><span class="header-section-number">10.3.2</span> Visualización</h3>
+<section id="visualización" class="level4" data-number="8.6.1.1">
+<h4 data-number="8.6.1.1" class="anchored" data-anchor-id="visualización"><span class="header-section-number">8.6.1.1</span> Visualización</h4>
 <p>Esto se puede tarda un rato</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb66"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb66-1"><a href="#cb66-1" aria-hidden="true" tabindex="-1"></a>performance<span class="sc">::</span><span class="fu">check_model</span>(modelo2, <span class="at">se=</span>F)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -861,12 +867,12 @@ F-statistic:  6384 on 3 and 90089 DF,  p-value: &lt; 2.2e-16</code></pre>
 </div>
 </section>
 </section>
-<section id="ejercicio" class="level2" data-number="10.4">
-<h2 data-number="10.4" class="anchored" data-anchor-id="ejercicio"><span class="header-section-number">10.4</span> Ejercicio</h2>
+</section>
+<section id="ejercicio" class="level2" data-number="8.7">
+<h2 data-number="8.7" class="anchored" data-anchor-id="ejercicio"><span class="header-section-number">8.7</span> Ejercicio</h2>
 <p>Corre un modelo con al menos dos variables con tu base de datos. Si en tu tema la variable dependiente no numérica, puedes correr un modelo de los gastos e incluir las variables clase_hog y educa_jefe</p>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->
@@ -1225,6 +1231,9 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </a>          
   </div>
   <div class="nav-page nav-page-next">
+      <a href="./P9.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Regresión lineal (II)</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
   </div>
 </nav>
 </div> <!-- /content -->
